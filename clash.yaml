@@ -5,20 +5,7 @@ mode: rule
 log-level: warning
 external-controller: "127.0.0.1:9090"
 proxies:
-  - name: "🇷🇺 LTE | JSC | #1"
-    type: vless
-    server: 84.38.186.105
-    port: 446
-    uuid: 6cd5e8d2-3f2f-46dc-9fe8-943ee0c5e47e
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: ads.x5.ru
-    reality-opts:
-      public-key: o1VQJCk-MnB5crwv2LP7lBWt9y_gezX_iH46AcS0wAI
-      short-id: c226283c4de5b1ad
-    client-fingerprint: firefox
-  - name: "🇷🇺 LTE | Datahouse.ru | #2"
+  - name: "🇷🇺 LTE | Datahouse.ru | #1"
     type: vless
     server: 62.152.56.110
     port: 6443
@@ -31,6 +18,19 @@ proxies:
       public-key: hlJpjNVBd0c3DP2ngqXoaKtgw-0p5PKj5eF9mO_Od3I
       short-id: 45ba91f179ad1f26
     client-fingerprint: chrome
+  - name: "🇷🇺 LTE | JSC | #2"
+    type: vless
+    server: 84.38.186.105
+    port: 446
+    uuid: 6cd5e8d2-3f2f-46dc-9fe8-943ee0c5e47e
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: ads.x5.ru
+    reality-opts:
+      public-key: o1VQJCk-MnB5crwv2LP7lBWt9y_gezX_iH46AcS0wAI
+      short-id: c226283c4de5b1ad
+    client-fingerprint: firefox
   - name: "🇬🇧 LTE | EdgeSec | #3"
     type: vless
     server: 31.76.246.40
@@ -61,7 +61,33 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: nexusGrpc
-  - name: "🇬🇪 LTE | H2nexus | #5"
+  - name: "🇬🇧 LTE | Alibaba.com | #5"
+    type: vless
+    server: 8.208.25.123
+    port: 10002
+    uuid: c36a16a0-36ff-42d5-bd79-fd55bcb643fc
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.apple.com
+    reality-opts:
+      public-key: G90QHqX9hS3dcSfGKSZtxfjW_eFiaIeEMzw3BKIzwkg
+      short-id: 8a430229
+    client-fingerprint: firefox
+  - name: "🇱🇹 LTE | UAB | #6"
+    type: vless
+    server: 5.199.170.105
+    port: 443
+    uuid: fd47216b-4217-4ec1-85b9-98304634a391
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: amd.com
+    reality-opts:
+      public-key: xFUmqmEPEKyv-5ReppEM1oTkc04HQcBUfySH-EwPBlE
+      short-id: 6ba85179e30d4fc2
+    client-fingerprint: firefox
+  - name: "🇬🇪 LTE | H2nexus | #7"
     type: vless
     server: 2.27.26.197
     port: 443
@@ -76,20 +102,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: nexusGrpc
-  - name: "🇱🇹 LTE | UAB | #6"
-    type: vless
-    server: 5.199.170.105
-    port: 443
-    uuid: fd47216b-4217-4ec1-85b9-98304634a391
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: amd.com
-    reality-opts:
-      public-key: xFUmqmEPEKyv-5ReppEM1oTkc04HQcBUfySH-EwPBlE
-      short-id: 6ba85179e30d4fc2
-    client-fingerprint: firefox
-  - name: "🇱🇹 LTE | Global | #7"
+  - name: "🇱🇹 LTE | Global | #8"
     type: vless
     server: 46.29.234.210
     port: 443
@@ -104,7 +117,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc
-  - name: "🇳🇱 LTE | OC | #8"
+  - name: "🇳🇱 LTE | OC | #9"
     type: vless
     server: 95.85.228.34
     port: 443
@@ -119,7 +132,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: nexusGrpc
-  - name: "🇩🇪 LTE | Hetzner | #9"
+  - name: "🇩🇪 LTE | Hetzner | #10"
     type: vless
     server: 49.12.102.241
     port: 443
@@ -132,7 +145,7 @@ proxies:
       public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
       short-id: 9e4eced6e98ed4d4
     client-fingerprint: firefox
-  - name: "🇩🇪 LTE | LeaseWeb | #10"
+  - name: "🇩🇪 LTE | LeaseWeb | #11"
     type: vless
     server: 5.61.36.241
     port: 443
@@ -148,20 +161,22 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🇫🇮 LTE | H2nexus | #11"
+  - name: "🇫🇷 LTE | Aeza | #12"
     type: vless
-    server: 85.192.48.81
+    server: 77.221.152.151
     port: 443
-    uuid: 8f0560ec-ba22-4431-a6a7-318dc59d5233
+    uuid: d2e3768f-cb23-4cfc-a884-dbd6813cb70b
     udp: true
-    flow: xtls-rprx-vision
     tls: true
-    servername: joings-file-import.ru
+    servername: www.lefigaro.fr
     reality-opts:
-      public-key: CxMPFpwhcR9Ocp-Xy_1J08mo-atdHKUf58WLOy_XlgM
-      short-id: d9662905
+      public-key: Uwj82vGl-jAhU3VflWnTy7rISYi03slggjS32Zx8pkk
+      short-id: 6ba85179e30d4fc2
     client-fingerprint: firefox
-  - name: "🇱🇹 LTE | UAB | #12"
+    network: grpc
+    grpc-opts:
+      grpc-service-name: wlgrpc
+  - name: "🇱🇹 LTE | UAB | #13"
     type: vless
     server: 84.32.209.210
     port: 7443
@@ -174,7 +189,7 @@ proxies:
       public-key: xFUmqmEPEKyv-5ReppEM1oTkc04HQcBUfySH-EwPBlE
       short-id: 6ba85179e30d4fc2
     client-fingerprint: firefox
-  - name: "🇳🇱 LTE | ExpressHost | #13"
+  - name: "🇳🇱 LTE | ExpressHost | #14"
     type: vless
     server: 31.56.186.145
     port: 443
@@ -190,22 +205,33 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🇫🇷 LTE | Aeza | #14"
+  - name: "🇭🇰 LTE | Lucidacloud | #15"
     type: vless
-    server: 77.221.152.151
+    server: 38.207.177.236
     port: 443
-    uuid: d2e3768f-cb23-4cfc-a884-dbd6813cb70b
+    uuid: 9c64064c-aaaf-449f-9344-77632fc9ff1c
     udp: true
+    flow: xtls-rprx-vision
     tls: true
-    servername: www.lefigaro.fr
+    servername: www.cloudflare.com
     reality-opts:
-      public-key: Uwj82vGl-jAhU3VflWnTy7rISYi03slggjS32Zx8pkk
-      short-id: 6ba85179e30d4fc2
+      public-key: maES4RMEtsm5emBCixDRa6Y5GvmVwmwZNBL2G4Q03D4
+      short-id: 47de54e71fee3451
     client-fingerprint: firefox
-    network: grpc
-    grpc-opts:
-      grpc-service-name: wlgrpc
-  - name: "🇵🇱 LTE | Hostes | #15"
+  - name: "🇫🇮 LTE | H2nexus | #16"
+    type: vless
+    server: 85.192.48.81
+    port: 443
+    uuid: 8f0560ec-ba22-4431-a6a7-318dc59d5233
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: joings-file-import.ru
+    reality-opts:
+      public-key: CxMPFpwhcR9Ocp-Xy_1J08mo-atdHKUf58WLOy_XlgM
+      short-id: d9662905
+    client-fingerprint: firefox
+  - name: "🇵🇱 LTE | Hostes | #17"
     type: vless
     server: 31.56.188.123
     port: 443
@@ -220,7 +246,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-api-v2
-  - name: "🇳🇱 Универсальный | FDCservers.net | #16"
+  - name: "🇳🇱 Универсальный | FDCservers.net | #18"
     type: vless
     server: 50.7.176.54
     port: 443
@@ -234,48 +260,7 @@ proxies:
       path: /tt-ws
       headers:
         Host: ray.webvirt.cloud
-  - name: "🇭🇰 LTE | Lucidacloud | #17"
-    type: vless
-    server: 38.207.177.236
-    port: 443
-    uuid: 9c64064c-aaaf-449f-9344-77632fc9ff1c
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: www.cloudflare.com
-    reality-opts:
-      public-key: maES4RMEtsm5emBCixDRa6Y5GvmVwmwZNBL2G4Q03D4
-      short-id: 47de54e71fee3451
-    client-fingerprint: firefox
-  - name: "🇩🇪 LTE | Node | #18"
-    type: vless
-    server: 87.120.108.150
-    port: 443
-    uuid: 54d91bc3-a461-4458-a620-36f27f5d6975
-    udp: true
-    tls: true
-    servername: www.amd.com
-    reality-opts:
-      public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
-      short-id: 635a76c25a4b1820
-    client-fingerprint: firefox
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-api-v2
-  - name: "🇫🇮 LTE | PowerRDP-Netwo | #19"
-    type: vless
-    server: 31.76.31.127
-    port: 8443
-    uuid: 0731fb93-db06-4735-bdf3-9530a2eadbe7
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: ign.com
-    reality-opts:
-      public-key: sFdhitRUzFpr97vmZ8ljR6twnsf47v9ieUuXTrC5KQ8
-      short-id: ""
-    client-fingerprint: firefox
-  - name: "🇺🇸 Универсальный | Cloudflare, | #20"
+  - name: "🇺🇸 Универсальный | Cloudflare, | #19"
     type: vless
     server: 8.35.211.169
     port: 2083
@@ -289,46 +274,20 @@ proxies:
       path: /
       headers:
         Host: vp4.cc.cd
-  - name: "🌐 LTE | es.monkeyislan | #21"
+  - name: "🇫🇮 LTE | PowerRDP-Netwo | #20"
     type: vless
-    server: es.monkeyisland.xyz
-    port: 443
-    uuid: 253a8a56-83a4-4aba-8d61-cfc95c8c5160
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: es.monkeyisland.xyz
-    reality-opts:
-      public-key: 2AKBmK0PMf2zUMhRo1Ad-WNf_XoRk3AN-SGo6ZdhxA4
-      short-id: 19e741a804f420a7
-    client-fingerprint: firefox
-  - name: "🇷🇺 LTE | Global | #22"
-    type: vless
-    server: 77.110.113.162
+    server: 31.76.31.127
     port: 8443
     uuid: 0731fb93-db06-4735-bdf3-9530a2eadbe7
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: pingless.com
+    servername: ign.com
     reality-opts:
       public-key: sFdhitRUzFpr97vmZ8ljR6twnsf47v9ieUuXTrC5KQ8
-      short-id: a1b2c3d4e5f6a7b8
+      short-id: ""
     client-fingerprint: firefox
-  - name: "🌐 LTE | us.srv.anti-za | #23"
-    type: vless
-    server: us.srv.anti-zapret.com
-    port: 443
-    uuid: 13b55e8e-fbea-4ee1-b6b7-115fa3043182
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: us.srv.anti-zapret.com
-    reality-opts:
-      public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
-      short-id: 58fbcddfaae3ade9
-    client-fingerprint: firefox
-  - name: "🇩🇪 LTE | OC | #24"
+  - name: "🇩🇪 LTE | OC | #21"
     type: vless
     server: 64.188.79.53
     port: 48161
@@ -341,7 +300,33 @@ proxies:
       public-key: cm3MNPIRmySoBcEgeH6QEuVyoPbBQyjRhs8UF_swl1E
       short-id: 41388e02247a3902
     client-fingerprint: firefox
-  - name: "🌐 LTE | us.janusgate.o | #25"
+  - name: "🌐 LTE | es.monkeyislan | #22"
+    type: vless
+    server: es.monkeyisland.xyz
+    port: 443
+    uuid: 253a8a56-83a4-4aba-8d61-cfc95c8c5160
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: es.monkeyisland.xyz
+    reality-opts:
+      public-key: 2AKBmK0PMf2zUMhRo1Ad-WNf_XoRk3AN-SGo6ZdhxA4
+      short-id: 19e741a804f420a7
+    client-fingerprint: firefox
+  - name: "🇷🇺 LTE | Global | #23"
+    type: vless
+    server: 77.110.113.162
+    port: 8443
+    uuid: 0731fb93-db06-4735-bdf3-9530a2eadbe7
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: pingless.com
+    reality-opts:
+      public-key: sFdhitRUzFpr97vmZ8ljR6twnsf47v9ieUuXTrC5KQ8
+      short-id: a1b2c3d4e5f6a7b8
+    client-fingerprint: firefox
+  - name: "🌐 LTE | us.janusgate.o | #24"
     type: vless
     server: us.janusgate.org
     port: 443
@@ -354,6 +339,19 @@ proxies:
       public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
       short-id: 356a70f0d72b4e80
     client-fingerprint: chrome
+  - name: "🇮🇸 LTE | Hostkey | #25"
+    type: vless
+    server: 82.22.53.30
+    port: 448
+    uuid: f82944fe-9863-494a-9a2d-0f3120a774c6
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.googletagmanager.com
+    reality-opts:
+      public-key: 0B7XMJC-mBqvUkf_on0wPZeW1iVmZIbEPVyvz-V_jRI
+      short-id: 60d7a9bbacadc0fb
+    client-fingerprint: firefox
   - name: "🌐 LTE | fr.janusgate.o | #26"
     type: vless
     server: fr.janusgate.org
@@ -380,18 +378,18 @@ proxies:
       public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
       short-id: 17faf32cb516c9cb
     client-fingerprint: firefox
-  - name: "🇮🇸 LTE | Hostkey | #28"
+  - name: "🌐 LTE | cz.srv.anti-za | #28"
     type: vless
-    server: 82.22.53.30
-    port: 448
-    uuid: f82944fe-9863-494a-9a2d-0f3120a774c6
+    server: cz.srv.anti-zapret.com
+    port: 443
+    uuid: 13b55e8e-fbea-4ee1-b6b7-115fa3043182
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: www.googletagmanager.com
+    servername: cz.srv.anti-zapret.com
     reality-opts:
-      public-key: 0B7XMJC-mBqvUkf_on0wPZeW1iVmZIbEPVyvz-V_jRI
-      short-id: 60d7a9bbacadc0fb
+      public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
+      short-id: 17faf32cb516c9cb
     client-fingerprint: firefox
   - name: "🌐 LTE | pl.srv.anti-za | #29"
     type: vless
@@ -406,33 +404,20 @@ proxies:
       public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
       short-id: 17faf32cb516c9cb
     client-fingerprint: firefox
-  - name: "🌐 LTE | cz.srv.anti-za | #30"
+  - name: "🌐 LTE | nl.janusgate.o | #30"
     type: vless
-    server: cz.srv.anti-zapret.com
+    server: nl.janusgate.org
     port: 443
-    uuid: 13b55e8e-fbea-4ee1-b6b7-115fa3043182
+    uuid: b656e64a-77b6-4cbe-9c92-0c87bd480001
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: cz.srv.anti-zapret.com
+    servername: nl.janusgate.org
     reality-opts:
-      public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
-      short-id: 17faf32cb516c9cb
-    client-fingerprint: firefox
-  - name: "🌐 LTE | sw.srv.anti-za | #31"
-    type: vless
-    server: sw.srv.anti-zapret.com
-    port: 443
-    uuid: 13b55e8e-fbea-4ee1-b6b7-115fa3043182
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: sw.srv.anti-zapret.com
-    reality-opts:
-      public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
-      short-id: 17faf32cb516c9cb
-    client-fingerprint: firefox
-  - name: "🇩🇪 LTE | Node | #32"
+      public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
+      short-id: adc8372900bed89a
+    client-fingerprint: chrome
+  - name: "🇩🇪 LTE | Node | #31"
     type: vless
     server: 2.26.125.51
     port: 443
@@ -445,33 +430,20 @@ proxies:
       public-key: HOTVBbrNu_CXdYbnC8sumXQfZ_W7NG2vcN8o8SblTGI
       short-id: e6b0240761f538e1
     client-fingerprint: qq
-  - name: "🌐 LTE | bg.janusgate.o | #33"
+  - name: "🇸🇪 LTE | Node | #32"
     type: vless
-    server: bg.janusgate.org
+    server: 2.26.124.69
     port: 443
-    uuid: b656e64a-77b6-4cbe-9c92-0c87bd480001
+    uuid: 73db72eb-eae3-4623-9395-a5eedc584569
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: bg.janusgate.org
+    servername: site.rumedia-cdn.com
     reality-opts:
-      public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
-      short-id: c459c753b7ed9723
-    client-fingerprint: chrome
-  - name: "🌐 LTE | tr.janusgate.o | #34"
-    type: vless
-    server: tr.janusgate.org
-    port: 443
-    uuid: b656e64a-77b6-4cbe-9c92-0c87bd480001
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: tr.janusgate.org
-    reality-opts:
-      public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
-      short-id: d7b0dab7f95c437d
-    client-fingerprint: chrome
-  - name: "🇷🇺 LTE | Selectel | #35"
+      public-key: kWLch3EWX5VBdNU5EiTNQhMwaOWNUtqR-ftUcc-B6gc
+      short-id: 43dabaaf5e906033
+    client-fingerprint: qq
+  - name: "🇷🇺 LTE | Selectel | #33"
     type: vless
     server: 82.148.29.20
     port: 8443
@@ -486,19 +458,41 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: ""
-  - name: "🇸🇪 LTE | Node | #36"
+  - name: "🌐 LTE | sw.srv.anti-za | #34"
     type: vless
-    server: 2.26.124.69
+    server: sw.srv.anti-zapret.com
     port: 443
-    uuid: 73db72eb-eae3-4623-9395-a5eedc584569
+    uuid: 13b55e8e-fbea-4ee1-b6b7-115fa3043182
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: site.rumedia-cdn.com
+    servername: sw.srv.anti-zapret.com
     reality-opts:
-      public-key: kWLch3EWX5VBdNU5EiTNQhMwaOWNUtqR-ftUcc-B6gc
-      short-id: 43dabaaf5e906033
-    client-fingerprint: qq
+      public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
+      short-id: 17faf32cb516c9cb
+    client-fingerprint: firefox
+  - name: "🇷🇺 Универсальный | JSC | #35"
+    type: vless
+    server: 85.239.44.8
+    port: 27700
+    uuid: ce7dcd95-2f9a-431f-9c3e-0caaf6428798
+    udp: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zuugrpc
+  - name: "🌐 LTE | bg.janusgate.o | #36"
+    type: vless
+    server: bg.janusgate.org
+    port: 443
+    uuid: b656e64a-77b6-4cbe-9c92-0c87bd480001
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bg.janusgate.org
+    reality-opts:
+      public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
+      short-id: c459c753b7ed9723
+    client-fingerprint: chrome
   - name: "🌐 LTE | lt.janusgate.o | #37"
     type: vless
     server: lt.janusgate.org
@@ -512,35 +506,26 @@ proxies:
       public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
       short-id: 6ed1d644822b2951
     client-fingerprint: chrome
-  - name: "🇸🇪 LTE | Portlane | #38"
+  - name: "🌐 LTE | tr.janusgate.o | #38"
     type: vless
-    server: 46.246.92.109
+    server: tr.janusgate.org
     port: 443
-    uuid: 14f19724-de91-4285-a633-aa8e2caaf812
+    uuid: b656e64a-77b6-4cbe-9c92-0c87bd480001
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: site.rumedia-cdn.com
+    servername: tr.janusgate.org
     reality-opts:
-      public-key: JwL5KoiWkCJI2vMJxyTEplfv-zBAtwxOH8SMbw6QHzY
-      short-id: cd40c992fe4b10c2
-    client-fingerprint: qq
-  - name: "🇷🇺 Универсальный | JSC | #39"
-    type: vless
-    server: 85.239.44.8
-    port: 27700
-    uuid: ce7dcd95-2f9a-431f-9c3e-0caaf6428798
-    udp: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: zuugrpc
-  - name: "🇫🇷 Сервер | Amazon | #40"
+      public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
+      short-id: d7b0dab7f95c437d
+    client-fingerprint: chrome
+  - name: "🇫🇷 Сервер | Amazon | #39"
     type: vless
     server: 52.47.123.79
     port: 22224
     uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
     udp: true
-  - name: "🇷🇺 LTE | JSC | #41"
+  - name: "🇷🇺 LTE | JSC | #40"
     type: vless
     server: 92.53.64.241
     port: 443
@@ -555,7 +540,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: ""
-  - name: "🇷🇺 LTE | Yandex.Cloud | #42"
+  - name: "🇷🇺 LTE | Yandex.Cloud | #41"
     type: vless
     server: 51.250.72.37
     port: 52000
@@ -568,7 +553,7 @@ proxies:
       public-key: ndSxyXpSzx2SnGiRSZ6SSzVmOWVsgRMzVfqBm6PKog4
       short-id: ""
     client-fingerprint: firefox
-  - name: "🌐 LTE | ru-lemon-1.cdx | #43"
+  - name: "🌐 LTE | ru-lemon-1.cdx | #42"
     type: vless
     server: ru-lemon-1.cdx-edge.com
     port: 52000
@@ -581,7 +566,7 @@ proxies:
       public-key: ndSxyXpSzx2SnGiRSZ6SSzVmOWVsgRMzVfqBm6PKog4
       short-id: ""
     client-fingerprint: qq
-  - name: "🌐 LTE | ru-orange-1.cd | #44"
+  - name: "🌐 LTE | ru-orange-1.cd | #43"
     type: vless
     server: ru-orange-1.cdx-edge.com
     port: 52000
@@ -594,26 +579,7 @@ proxies:
       public-key: ndSxyXpSzx2SnGiRSZ6SSzVmOWVsgRMzVfqBm6PKog4
       short-id: ""
     client-fingerprint: qq
-  - name: "🇩🇪 Сервер | Hetzner | #45"
-    type: vless
-    server: 91.107.159.216
-    port: 26437
-    uuid: 4281e90a-a495-45ac-bac0-c4aa7ed133b1
-    udp: true
-  - name: "🌐 LTE | ru.pool-b.netc | #46"
-    type: vless
-    server: ru.pool-b.netcenter-cdn.com
-    port: 44003
-    uuid: 7110a733-0f08-4ae1-b8a9-eac6fa38a01c
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: pool-b.pools.netcenter-cdn.com
-    reality-opts:
-      public-key: mCtDwMr9u9MdztUGzCGADj-nfHv6CQpAf_ywbyKl8ww
-      short-id: ab3f86b9f8e956
-    client-fingerprint: firefox
-  - name: "🌐 LTE | ru.pool-b.netc | #47"
+  - name: "🌐 LTE | ru.pool-b.netc | #44"
     type: vless
     server: ru.pool-b.netcenter-cdn.com
     port: 44002
@@ -626,7 +592,20 @@ proxies:
       public-key: sl0wx4BFdJ7SsfQ6SjkSHU_SQ_0mAhyIlT2eAxWGRyQ
       short-id: 0b9161cba931
     client-fingerprint: firefox
-  - name: "🌐 LTE | ru.pool-b.netc | #48"
+  - name: "🌐 LTE | ru.pool-b.netc | #45"
+    type: vless
+    server: ru.pool-b.netcenter-cdn.com
+    port: 44003
+    uuid: 7110a733-0f08-4ae1-b8a9-eac6fa38a01c
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: pool-b.pools.netcenter-cdn.com
+    reality-opts:
+      public-key: mCtDwMr9u9MdztUGzCGADj-nfHv6CQpAf_ywbyKl8ww
+      short-id: ab3f86b9f8e956
+    client-fingerprint: firefox
+  - name: "🌐 LTE | ru.pool-b.netc | #46"
     type: vless
     server: ru.pool-b.netcenter-cdn.com
     port: 44001
@@ -639,20 +618,22 @@ proxies:
       public-key: qXyJbGAN_0PyZFVR7vb7anVdCK2Zhxexs7dVgc3vqn0
       short-id: 20
     client-fingerprint: firefox
-  - name: "🇬🇧 LTE | Alibaba.com | #49"
+  - name: "🇩🇪 LTE | Node | #47"
     type: vless
-    server: 8.208.25.123
-    port: 10002
-    uuid: c36a16a0-36ff-42d5-bd79-fd55bcb643fc
+    server: 87.120.108.150
+    port: 443
+    uuid: 54d91bc3-a461-4458-a620-36f27f5d6975
     udp: true
-    flow: xtls-rprx-vision
     tls: true
-    servername: www.apple.com
+    servername: www.amd.com
     reality-opts:
-      public-key: G90QHqX9hS3dcSfGKSZtxfjW_eFiaIeEMzw3BKIzwkg
-      short-id: 8a430229
+      public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
+      short-id: 635a76c25a4b1820
     client-fingerprint: firefox
-  - name: "🇷🇺 Универсальный | Fornex | #50"
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc-api-v2
+  - name: "🇷🇺 Универсальный | Fornex | #48"
     type: vless
     server: 31.172.67.215
     port: 2200
@@ -663,7 +644,7 @@ proxies:
       path: /v1
       headers:
         Host: rzd.ru
-  - name: "🇷🇺 Универсальный | JSC | #51"
+  - name: "🇷🇺 Универсальный | JSC | #49"
     type: vless
     server: 85.239.44.8
     port: 26700
@@ -673,75 +654,87 @@ proxies:
     http-opts:
       path:
         - /zuuws2
-  - name: "🌐 LTE | nl.janusgate.o | #52"
+  - name: "🇸🇪 LTE | Portlane | #50"
     type: vless
-    server: nl.janusgate.org
+    server: 46.246.92.109
     port: 443
-    uuid: b656e64a-77b6-4cbe-9c92-0c87bd480001
+    uuid: 14f19724-de91-4285-a633-aa8e2caaf812
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: nl.janusgate.org
+    servername: site.rumedia-cdn.com
     reality-opts:
-      public-key: nilJ07r1KZ0-KhmRNYeICXGhM9HeG9uxnRaqjYz3fWg
-      short-id: adc8372900bed89a
-    client-fingerprint: chrome
+      public-key: JwL5KoiWkCJI2vMJxyTEplfv-zBAtwxOH8SMbw6QHzY
+      short-id: cd40c992fe4b10c2
+    client-fingerprint: qq
+  - name: "🌐 LTE | us.srv.anti-za | #51"
+    type: vless
+    server: us.srv.anti-zapret.com
+    port: 443
+    uuid: 13b55e8e-fbea-4ee1-b6b7-115fa3043182
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: us.srv.anti-zapret.com
+    reality-opts:
+      public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
+      short-id: 58fbcddfaae3ade9
+    client-fingerprint: firefox
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
-      - "🇷🇺 LTE | JSC | #1"
-      - "🇷🇺 LTE | Datahouse.ru | #2"
+      - "🇷🇺 LTE | Datahouse.ru | #1"
+      - "🇷🇺 LTE | JSC | #2"
       - "🇬🇧 LTE | EdgeSec | #3"
       - "🇪🇸 LTE | H2nexus | #4"
-      - "🇬🇪 LTE | H2nexus | #5"
+      - "🇬🇧 LTE | Alibaba.com | #5"
       - "🇱🇹 LTE | UAB | #6"
-      - "🇱🇹 LTE | Global | #7"
-      - "🇳🇱 LTE | OC | #8"
-      - "🇩🇪 LTE | Hetzner | #9"
-      - "🇩🇪 LTE | LeaseWeb | #10"
-      - "🇫🇮 LTE | H2nexus | #11"
-      - "🇱🇹 LTE | UAB | #12"
-      - "🇳🇱 LTE | ExpressHost | #13"
-      - "🇫🇷 LTE | Aeza | #14"
-      - "🇵🇱 LTE | Hostes | #15"
-      - "🇳🇱 Универсальный | FDCservers.net | #16"
-      - "🇭🇰 LTE | Lucidacloud | #17"
-      - "🇩🇪 LTE | Node | #18"
-      - "🇫🇮 LTE | PowerRDP-Netwo | #19"
-      - "🇺🇸 Универсальный | Cloudflare, | #20"
-      - "🌐 LTE | es.monkeyislan | #21"
-      - "🇷🇺 LTE | Global | #22"
-      - "🌐 LTE | us.srv.anti-za | #23"
-      - "🇩🇪 LTE | OC | #24"
-      - "🌐 LTE | us.janusgate.o | #25"
+      - "🇬🇪 LTE | H2nexus | #7"
+      - "🇱🇹 LTE | Global | #8"
+      - "🇳🇱 LTE | OC | #9"
+      - "🇩🇪 LTE | Hetzner | #10"
+      - "🇩🇪 LTE | LeaseWeb | #11"
+      - "🇫🇷 LTE | Aeza | #12"
+      - "🇱🇹 LTE | UAB | #13"
+      - "🇳🇱 LTE | ExpressHost | #14"
+      - "🇭🇰 LTE | Lucidacloud | #15"
+      - "🇫🇮 LTE | H2nexus | #16"
+      - "🇵🇱 LTE | Hostes | #17"
+      - "🇳🇱 Универсальный | FDCservers.net | #18"
+      - "🇺🇸 Универсальный | Cloudflare, | #19"
+      - "🇫🇮 LTE | PowerRDP-Netwo | #20"
+      - "🇩🇪 LTE | OC | #21"
+      - "🌐 LTE | es.monkeyislan | #22"
+      - "🇷🇺 LTE | Global | #23"
+      - "🌐 LTE | us.janusgate.o | #24"
+      - "🇮🇸 LTE | Hostkey | #25"
       - "🌐 LTE | fr.janusgate.o | #26"
       - "🌐 LTE | nl.srv.anti-za | #27"
-      - "🇮🇸 LTE | Hostkey | #28"
+      - "🌐 LTE | cz.srv.anti-za | #28"
       - "🌐 LTE | pl.srv.anti-za | #29"
-      - "🌐 LTE | cz.srv.anti-za | #30"
-      - "🌐 LTE | sw.srv.anti-za | #31"
-      - "🇩🇪 LTE | Node | #32"
-      - "🌐 LTE | bg.janusgate.o | #33"
-      - "🌐 LTE | tr.janusgate.o | #34"
-      - "🇷🇺 LTE | Selectel | #35"
-      - "🇸🇪 LTE | Node | #36"
+      - "🌐 LTE | nl.janusgate.o | #30"
+      - "🇩🇪 LTE | Node | #31"
+      - "🇸🇪 LTE | Node | #32"
+      - "🇷🇺 LTE | Selectel | #33"
+      - "🌐 LTE | sw.srv.anti-za | #34"
+      - "🇷🇺 Универсальный | JSC | #35"
+      - "🌐 LTE | bg.janusgate.o | #36"
       - "🌐 LTE | lt.janusgate.o | #37"
-      - "🇸🇪 LTE | Portlane | #38"
-      - "🇷🇺 Универсальный | JSC | #39"
-      - "🇫🇷 Сервер | Amazon | #40"
-      - "🇷🇺 LTE | JSC | #41"
-      - "🇷🇺 LTE | Yandex.Cloud | #42"
-      - "🌐 LTE | ru-lemon-1.cdx | #43"
-      - "🌐 LTE | ru-orange-1.cd | #44"
-      - "🇩🇪 Сервер | Hetzner | #45"
+      - "🌐 LTE | tr.janusgate.o | #38"
+      - "🇫🇷 Сервер | Amazon | #39"
+      - "🇷🇺 LTE | JSC | #40"
+      - "🇷🇺 LTE | Yandex.Cloud | #41"
+      - "🌐 LTE | ru-lemon-1.cdx | #42"
+      - "🌐 LTE | ru-orange-1.cd | #43"
+      - "🌐 LTE | ru.pool-b.netc | #44"
+      - "🌐 LTE | ru.pool-b.netc | #45"
       - "🌐 LTE | ru.pool-b.netc | #46"
-      - "🌐 LTE | ru.pool-b.netc | #47"
-      - "🌐 LTE | ru.pool-b.netc | #48"
-      - "🇬🇧 LTE | Alibaba.com | #49"
-      - "🇷🇺 Универсальный | Fornex | #50"
-      - "🇷🇺 Универсальный | JSC | #51"
-      - "🌐 LTE | nl.janusgate.o | #52"
+      - "🇩🇪 LTE | Node | #47"
+      - "🇷🇺 Универсальный | Fornex | #48"
+      - "🇷🇺 Универсальный | JSC | #49"
+      - "🇸🇪 LTE | Portlane | #50"
+      - "🌐 LTE | us.srv.anti-za | #51"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -749,58 +742,57 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 Авто
-      - "🇷🇺 LTE | JSC | #1"
-      - "🇷🇺 LTE | Datahouse.ru | #2"
+      - "🇷🇺 LTE | Datahouse.ru | #1"
+      - "🇷🇺 LTE | JSC | #2"
       - "🇬🇧 LTE | EdgeSec | #3"
       - "🇪🇸 LTE | H2nexus | #4"
-      - "🇬🇪 LTE | H2nexus | #5"
+      - "🇬🇧 LTE | Alibaba.com | #5"
       - "🇱🇹 LTE | UAB | #6"
-      - "🇱🇹 LTE | Global | #7"
-      - "🇳🇱 LTE | OC | #8"
-      - "🇩🇪 LTE | Hetzner | #9"
-      - "🇩🇪 LTE | LeaseWeb | #10"
-      - "🇫🇮 LTE | H2nexus | #11"
-      - "🇱🇹 LTE | UAB | #12"
-      - "🇳🇱 LTE | ExpressHost | #13"
-      - "🇫🇷 LTE | Aeza | #14"
-      - "🇵🇱 LTE | Hostes | #15"
-      - "🇳🇱 Универсальный | FDCservers.net | #16"
-      - "🇭🇰 LTE | Lucidacloud | #17"
-      - "🇩🇪 LTE | Node | #18"
-      - "🇫🇮 LTE | PowerRDP-Netwo | #19"
-      - "🇺🇸 Универсальный | Cloudflare, | #20"
-      - "🌐 LTE | es.monkeyislan | #21"
-      - "🇷🇺 LTE | Global | #22"
-      - "🌐 LTE | us.srv.anti-za | #23"
-      - "🇩🇪 LTE | OC | #24"
-      - "🌐 LTE | us.janusgate.o | #25"
+      - "🇬🇪 LTE | H2nexus | #7"
+      - "🇱🇹 LTE | Global | #8"
+      - "🇳🇱 LTE | OC | #9"
+      - "🇩🇪 LTE | Hetzner | #10"
+      - "🇩🇪 LTE | LeaseWeb | #11"
+      - "🇫🇷 LTE | Aeza | #12"
+      - "🇱🇹 LTE | UAB | #13"
+      - "🇳🇱 LTE | ExpressHost | #14"
+      - "🇭🇰 LTE | Lucidacloud | #15"
+      - "🇫🇮 LTE | H2nexus | #16"
+      - "🇵🇱 LTE | Hostes | #17"
+      - "🇳🇱 Универсальный | FDCservers.net | #18"
+      - "🇺🇸 Универсальный | Cloudflare, | #19"
+      - "🇫🇮 LTE | PowerRDP-Netwo | #20"
+      - "🇩🇪 LTE | OC | #21"
+      - "🌐 LTE | es.monkeyislan | #22"
+      - "🇷🇺 LTE | Global | #23"
+      - "🌐 LTE | us.janusgate.o | #24"
+      - "🇮🇸 LTE | Hostkey | #25"
       - "🌐 LTE | fr.janusgate.o | #26"
       - "🌐 LTE | nl.srv.anti-za | #27"
-      - "🇮🇸 LTE | Hostkey | #28"
+      - "🌐 LTE | cz.srv.anti-za | #28"
       - "🌐 LTE | pl.srv.anti-za | #29"
-      - "🌐 LTE | cz.srv.anti-za | #30"
-      - "🌐 LTE | sw.srv.anti-za | #31"
-      - "🇩🇪 LTE | Node | #32"
-      - "🌐 LTE | bg.janusgate.o | #33"
-      - "🌐 LTE | tr.janusgate.o | #34"
-      - "🇷🇺 LTE | Selectel | #35"
-      - "🇸🇪 LTE | Node | #36"
+      - "🌐 LTE | nl.janusgate.o | #30"
+      - "🇩🇪 LTE | Node | #31"
+      - "🇸🇪 LTE | Node | #32"
+      - "🇷🇺 LTE | Selectel | #33"
+      - "🌐 LTE | sw.srv.anti-za | #34"
+      - "🇷🇺 Универсальный | JSC | #35"
+      - "🌐 LTE | bg.janusgate.o | #36"
       - "🌐 LTE | lt.janusgate.o | #37"
-      - "🇸🇪 LTE | Portlane | #38"
-      - "🇷🇺 Универсальный | JSC | #39"
-      - "🇫🇷 Сервер | Amazon | #40"
-      - "🇷🇺 LTE | JSC | #41"
-      - "🇷🇺 LTE | Yandex.Cloud | #42"
-      - "🌐 LTE | ru-lemon-1.cdx | #43"
-      - "🌐 LTE | ru-orange-1.cd | #44"
-      - "🇩🇪 Сервер | Hetzner | #45"
+      - "🌐 LTE | tr.janusgate.o | #38"
+      - "🇫🇷 Сервер | Amazon | #39"
+      - "🇷🇺 LTE | JSC | #40"
+      - "🇷🇺 LTE | Yandex.Cloud | #41"
+      - "🌐 LTE | ru-lemon-1.cdx | #42"
+      - "🌐 LTE | ru-orange-1.cd | #43"
+      - "🌐 LTE | ru.pool-b.netc | #44"
+      - "🌐 LTE | ru.pool-b.netc | #45"
       - "🌐 LTE | ru.pool-b.netc | #46"
-      - "🌐 LTE | ru.pool-b.netc | #47"
-      - "🌐 LTE | ru.pool-b.netc | #48"
-      - "🇬🇧 LTE | Alibaba.com | #49"
-      - "🇷🇺 Универсальный | Fornex | #50"
-      - "🇷🇺 Универсальный | JSC | #51"
-      - "🌐 LTE | nl.janusgate.o | #52"
+      - "🇩🇪 LTE | Node | #47"
+      - "🇷🇺 Универсальный | Fornex | #48"
+      - "🇷🇺 Универсальный | JSC | #49"
+      - "🇸🇪 LTE | Portlane | #50"
+      - "🌐 LTE | us.srv.anti-za | #51"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
