@@ -326,9 +326,9 @@ def _b64e(s): return base64.b64encode(s.encode()).decode()
 def _make_announce(updated_at: str) -> str:
     return (
         f"🕐 Обновлено: {updated_at} UTC\n\n"
-        "Поддержка прекращена!\n"
+        "Поддержка ВОЗОБНОВЛЕНА!!!!\n"
         "Парсер будет работать!!!\n"
-        "(но хуже, наверное)\n\n"
+        "\n\n"
     )
 
 
