@@ -5,7 +5,20 @@ mode: rule
 log-level: warning
 external-controller: "127.0.0.1:9090"
 proxies:
-  - name: "🌐 LTE | us.windconnect | #1"
+  - name: "🌐 LTE | r.windconnect. | #1"
+    type: vless
+    server: r.windconnect.pro
+    port: 443
+    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: r.windconnect.pro
+    reality-opts:
+      public-key: 6gz_3tpT8L9jwst8r9r-FRdekpGNobE6AVDMjQaRvlo
+      short-id: b44f10d2fc37a45a
+    client-fingerprint: firefox
+  - name: "🌐 LTE | us.windconnect | #2"
     type: vless
     server: us.windconnect.pro
     port: 443
@@ -18,7 +31,7 @@ proxies:
       public-key: yHJL_ycxGuiOUB4EQbaiO2QEmkR4sHmN07dzkb1Cf3U
       short-id: 6c91479b193d956c
     client-fingerprint: firefox
-  - name: "🌐 LTE | mg-42.whit3.ne | #2"
+  - name: "🌐 LTE | mg-42.whit3.ne | #3"
     type: vless
     server: mg-42.whit3.net
     port: 4443
@@ -34,7 +47,7 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🌐 LTE | mg-42.whit3.ne | #3"
+  - name: "🌐 LTE | mg-42.whit3.ne | #4"
     type: vless
     server: mg-42.whit3.net
     port: 443
@@ -47,7 +60,7 @@ proxies:
       public-key: nNg-TAbG5N2ZU2q2esoguL7gOIgcGu4iJ4BASrP5BFI
       short-id: 08e09895b90eea7a
     client-fingerprint: firefox
-  - name: "🌐 LTE | mg-42.whit3.ne | #4"
+  - name: "🌐 LTE | mg-42.whit3.ne | #5"
     type: vless
     server: mg-42.whit3.net
     port: 8443
@@ -62,7 +75,48 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: mg-42_grpc
-  - name: "🌐 LTE | gd-0z.whit3.ne | #5"
+  - name: "🌐 LTE | fl.windconnect | #6"
+    type: vless
+    server: fl.windconnect.pro
+    port: 443
+    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: fl.windconnect.pro
+    reality-opts:
+      public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
+      short-id: 3c6ec7b2d73a28b6
+    client-fingerprint: edge
+  - name: "🌐 LTE | au.windconnect | #7"
+    type: vless
+    server: au.windconnect.pro
+    port: 443
+    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: au.windconnect.pro
+    reality-opts:
+      public-key: jykHELMbLLn1SDyllhXRWbAAneDWlJmiGPylnz7ECVc
+      short-id: 3f0641de339bb8da
+    client-fingerprint: firefox
+  - name: "🌐 LTE | gd-0z.whit3.ne | #8"
+    type: vless
+    server: gd-0z.whit3.net
+    port: 8443
+    uuid: a6cf4b28-ba72-4e8c-90f8-6a884107ab3c
+    udp: true
+    tls: true
+    servername: gd-0z.whit3.net
+    reality-opts:
+      public-key: I81tkGsfVOK0JNnjsHRluXcXI-DyV_4mLQ4e8QJuSxU
+      short-id: d7d38e70e3362842
+    client-fingerprint: firefox
+    network: grpc
+    grpc-opts:
+      grpc-service-name: gd-0z_grpc
+  - name: "🌐 LTE | gd-0z.whit3.ne | #9"
     type: vless
     server: gd-0z.whit3.net
     port: 443
@@ -75,7 +129,7 @@ proxies:
       public-key: I81tkGsfVOK0JNnjsHRluXcXI-DyV_4mLQ4e8QJuSxU
       short-id: d7d38e70e3362842
     client-fingerprint: firefox
-  - name: "🌐 LTE | gd-0z.whit3.ne | #6"
+  - name: "🌐 LTE | gd-0z.whit3.ne | #10"
     type: vless
     server: gd-0z.whit3.net
     port: 4443
@@ -91,150 +145,20 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🌐 LTE | gd-0z.whit3.ne | #7"
-    type: vless
-    server: gd-0z.whit3.net
-    port: 8443
-    uuid: a6cf4b28-ba72-4e8c-90f8-6a884107ab3c
-    udp: true
-    tls: true
-    servername: gd-0z.whit3.net
-    reality-opts:
-      public-key: I81tkGsfVOK0JNnjsHRluXcXI-DyV_4mLQ4e8QJuSxU
-      short-id: d7d38e70e3362842
-    client-fingerprint: firefox
-    network: grpc
-    grpc-opts:
-      grpc-service-name: gd-0z_grpc
-  - name: "🇸🇪 LTE | OC | #8"
-    type: vless
-    server: 95.85.241.208
-    port: 443
-    uuid: 8d44a812-229a-4c54-a461-8109b29621a7
-    udp: true
-    tls: true
-    servername: dl.google.com
-    reality-opts:
-      public-key: 6CHUluOn_Tdab7JOfUArmcfQPVEd4PbEQJMPvKWElhw
-      short-id: ""
-    client-fingerprint: chrome
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-tunnel
-  - name: "🇩🇪 LTE | Dedik | #9"
-    type: vless
-    server: 89.34.90.25
-    port: 443
-    uuid: 8d44a812-229a-4c54-a461-8109b29621a7
-    udp: true
-    tls: true
-    servername: dl.google.com
-    reality-opts:
-      public-key: HFTFARa1OS53m4HWnjwtZ0J3lu7aoKkE7OujIyM62QI
-      short-id: 2a236a7fcbe0ce61
-    client-fingerprint: firefox
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-tunnel
-  - name: "🇩🇪 LTE | OC | #10"
-    type: vless
-    server: 95.85.252.146
-    port: 443
-    uuid: 8d44a812-229a-4c54-a461-8109b29621a7
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: google.com
-    reality-opts:
-      public-key: vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0
-      short-id: ""
-    client-fingerprint: firefox
-  - name: "🌐 LTE | fl.windconnect | #11"
-    type: vless
-    server: fl.windconnect.pro
-    port: 443
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: fl.windconnect.pro
-    reality-opts:
-      public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
-      short-id: 3c6ec7b2d73a28b6
-    client-fingerprint: edge
-  - name: "🌐 LTE | r.windconnect. | #12"
-    type: vless
-    server: r.windconnect.pro
-    port: 443
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: r.windconnect.pro
-    reality-opts:
-      public-key: 6gz_3tpT8L9jwst8r9r-FRdekpGNobE6AVDMjQaRvlo
-      short-id: b44f10d2fc37a45a
-    client-fingerprint: firefox
-  - name: "🌐 LTE | au.windconnect | #13"
-    type: vless
-    server: au.windconnect.pro
-    port: 443
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: au.windconnect.pro
-    reality-opts:
-      public-key: jykHELMbLLn1SDyllhXRWbAAneDWlJmiGPylnz7ECVc
-      short-id: 3f0641de339bb8da
-    client-fingerprint: firefox
-  - name: "🌐 LTE | sw-ulra.whit3. | #14"
-    type: vless
-    server: sw-ulra.whit3.net
-    port: 443
-    uuid: a6cf4b28-ba72-4e8c-90f8-6a884107ab3c
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: sw-ulra.whit3.net
-    reality-opts:
-      public-key: 0ye46nPo-GJ6b2FlbxOjrbTSwbNZ55EA3zd75AD8EVg
-      short-id: e19a72a150911331
-    client-fingerprint: random
-  - name: "🇸🇪 LTE | OC | #15"
-    type: vless
-    server: 95.85.246.79
-    port: 443
-    uuid: 8d44a812-229a-4c54-a461-8109b29621a7
-    udp: true
-    tls: true
-    servername: dl.google.com
-    reality-opts:
-      public-key: HFTFARa1OS53m4HWnjwtZ0J3lu7aoKkE7OujIyM62QI
-      short-id: 2a236a7fcbe0ce61
-    client-fingerprint: firefox
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-tunnel
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
-      - "🌐 LTE | us.windconnect | #1"
-      - "🌐 LTE | mg-42.whit3.ne | #2"
+      - "🌐 LTE | r.windconnect. | #1"
+      - "🌐 LTE | us.windconnect | #2"
       - "🌐 LTE | mg-42.whit3.ne | #3"
       - "🌐 LTE | mg-42.whit3.ne | #4"
-      - "🌐 LTE | gd-0z.whit3.ne | #5"
-      - "🌐 LTE | gd-0z.whit3.ne | #6"
-      - "🌐 LTE | gd-0z.whit3.ne | #7"
-      - "🇸🇪 LTE | OC | #8"
-      - "🇩🇪 LTE | Dedik | #9"
-      - "🇩🇪 LTE | OC | #10"
-      - "🌐 LTE | fl.windconnect | #11"
-      - "🌐 LTE | r.windconnect. | #12"
-      - "🌐 LTE | au.windconnect | #13"
-      - "🌐 LTE | sw-ulra.whit3. | #14"
-      - "🇸🇪 LTE | OC | #15"
+      - "🌐 LTE | mg-42.whit3.ne | #5"
+      - "🌐 LTE | fl.windconnect | #6"
+      - "🌐 LTE | au.windconnect | #7"
+      - "🌐 LTE | gd-0z.whit3.ne | #8"
+      - "🌐 LTE | gd-0z.whit3.ne | #9"
+      - "🌐 LTE | gd-0z.whit3.ne | #10"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -242,21 +166,16 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 Авто
-      - "🌐 LTE | us.windconnect | #1"
-      - "🌐 LTE | mg-42.whit3.ne | #2"
+      - "🌐 LTE | r.windconnect. | #1"
+      - "🌐 LTE | us.windconnect | #2"
       - "🌐 LTE | mg-42.whit3.ne | #3"
       - "🌐 LTE | mg-42.whit3.ne | #4"
-      - "🌐 LTE | gd-0z.whit3.ne | #5"
-      - "🌐 LTE | gd-0z.whit3.ne | #6"
-      - "🌐 LTE | gd-0z.whit3.ne | #7"
-      - "🇸🇪 LTE | OC | #8"
-      - "🇩🇪 LTE | Dedik | #9"
-      - "🇩🇪 LTE | OC | #10"
-      - "🌐 LTE | fl.windconnect | #11"
-      - "🌐 LTE | r.windconnect. | #12"
-      - "🌐 LTE | au.windconnect | #13"
-      - "🌐 LTE | sw-ulra.whit3. | #14"
-      - "🇸🇪 LTE | OC | #15"
+      - "🌐 LTE | mg-42.whit3.ne | #5"
+      - "🌐 LTE | fl.windconnect | #6"
+      - "🌐 LTE | au.windconnect | #7"
+      - "🌐 LTE | gd-0z.whit3.ne | #8"
+      - "🌐 LTE | gd-0z.whit3.ne | #9"
+      - "🌐 LTE | gd-0z.whit3.ne | #10"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
