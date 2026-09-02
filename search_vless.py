@@ -322,14 +322,13 @@ def _build_remark(key, lat):
 
 def _b64e(s): return base64.b64encode(s.encode()).decode()
 
-
 def _make_announce(updated_at: str) -> str:
     return (
-        f"🕐 Обновлено: {updated_at} UTC\n\n"
-        "Поддержка ВОЗОБНОВЛЕНА!!!!\n"
-        "Парсер будет работать!!!\n"
-        "\n\n"
+        f"🕐 **Обновлено:** {updated_at} UTC\n\n"
+        "🔹 Нажмите (🔄), чтобы обновить подписку.\n"
+        "🔹 Нажмите (⏱️), чтобы проверить статус серверов."
     )
+
 
 
 def write_output(keys_with_lat):
