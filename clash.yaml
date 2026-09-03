@@ -5,23 +5,7 @@ mode: rule
 log-level: warning
 external-controller: "127.0.0.1:9090"
 proxies:
-  - name: "🇳🇱 LTE | PJSC | #1"
-    type: vless
-    server: 78.159.250.104
-    port: 443
-    uuid: 99e7fe72-5db5-4f4d-a7eb-dd8c9ef8bf20
-    udp: true
-    tls: true
-    servername: www.ozon.ru
-    reality-opts:
-      public-key: w42qluNCHvJAkqCCjg_BHu7eTr2qRQYn93OKUSfmHEI
-      short-id: ""
-    client-fingerprint: firefox
-    network: http
-    http-opts:
-      path:
-        - /
-  - name: "🇷🇺 LTE | JSC | #2"
+  - name: "🇷🇺 LTE | JSC | #1"
     type: vless
     server: 72.56.240.25
     port: 8443
@@ -34,50 +18,7 @@ proxies:
       public-key: tQurYwCIDKzXfvBAJPccnGVjW0STryfR8jtukxLedXQ
       short-id: 9b47430cd9785bcb
     client-fingerprint: firefox
-  - name: "🇷🇺 LTE | JSC | #3"
-    type: vless
-    server: 93.183.80.119
-    port: 443
-    uuid: d7430ae7-320c-4658-808b-3006d0627d82
-    udp: true
-    tls: true
-    servername: endeavouros.ubuntuhosting.host
-    reality-opts:
-      public-key: nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E
-      short-id: 707c8615b9
-    client-fingerprint: qq
-    network: grpc
-    grpc-opts:
-      grpc-service-name: gun
-  - name: "🌐 LTE | wl-1.myfreedom | #4"
-    type: vless
-    server: wl-1.myfreedom.rest
-    port: 443
-    uuid: 0cfee0f7-de6d-4d72-95c5-bb5d35094974
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: ads.vk.ru
-    reality-opts:
-      public-key: sdnD0vxmj8kHBOoVM8TE9IyBCGwnKNB8hZVaHp_Zfjk
-      short-id: 3b42
-    client-fingerprint: firefox
-  - name: "🇺🇦 LTE | "Cloud | #5"
-    type: vless
-    server: 91.224.87.22
-    port: 9882
-    uuid: 76186f1e-3062-4a2b-98c2-fab3c61a9511
-    udp: true
-    tls: true
-    servername: dl.google.com
-    reality-opts:
-      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-      short-id: aabb
-    client-fingerprint: chrome
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-tunnel
-  - name: "🇷🇺 LTE | "Cloud | #6"
+  - name: "🇷🇺 LTE | "Cloud | #2"
     type: vless
     server: 46.16.36.222
     port: 11446
@@ -92,48 +33,35 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: gun
-  - name: "🇷🇺 LTE | "Cloud | #7"
+  - name: "🌐 LTE | wl-1.myfreedom | #3"
     type: vless
-    server: 46.16.36.222
-    port: 11448
+    server: wl-1.myfreedom.rest
+    port: 443
+    uuid: 0cfee0f7-de6d-4d72-95c5-bb5d35094974
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: ads.vk.ru
+    reality-opts:
+      public-key: sdnD0vxmj8kHBOoVM8TE9IyBCGwnKNB8hZVaHp_Zfjk
+      short-id: 3b42
+    client-fingerprint: firefox
+  - name: "🇷🇺 LTE | JSC | #4"
+    type: vless
+    server: 93.183.80.119
+    port: 443
     uuid: d7430ae7-320c-4658-808b-3006d0627d82
     udp: true
     tls: true
-    servername: mageia.ubuntuhosting.host
+    servername: endeavouros.ubuntuhosting.host
     reality-opts:
-      public-key: gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs
-      short-id: b34f41089f1e
-    client-fingerprint: ios
+      public-key: nbrx6gGjaQ27MLBl-0Tp23ALk9sm95NeOFxhP2ufO1E
+      short-id: 707c8615b9
+    client-fingerprint: qq
     network: grpc
     grpc-opts:
       grpc-service-name: gun
-  - name: "🇩🇪 LTE | WAIcore | #8"
-    type: vless
-    server: 95.85.232.112
-    port: 443
-    uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: duchland1.vodniki.monster
-    reality-opts:
-      public-key: EYfpgja4VjpLUnWHtDJQ1XZk6xL5j4rXwf80Sw6keV0
-      short-id: 0c13e8822e7f58aa
-    client-fingerprint: chrome
-  - name: "🇩🇪 LTE | UAB | #9"
-    type: vless
-    server: 88.216.190.206
-    port: 443
-    uuid: 2f600710-9f4e-4eab-8de1-89f60a878e55
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: app4.goonars.com
-    reality-opts:
-      public-key: u51rZT5vJj8nO80QBBHVW2-WA5OzzQ1eL6euvszWLQI
-      short-id: 09ef88a6
-    client-fingerprint: firefox
-  - name: "🇳🇱 LTE | OC | #10"
+  - name: "🇳🇱 LTE | OC | #5"
     type: vless
     server: 95.85.228.30
     port: 443
@@ -149,7 +77,61 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🇲🇩 LTE | JSC | #11"
+  - name: "🇺🇦 LTE | "Cloud | #6"
+    type: vless
+    server: 91.224.87.22
+    port: 9882
+    uuid: 76186f1e-3062-4a2b-98c2-fab3c61a9511
+    udp: true
+    tls: true
+    servername: dl.google.com
+    reality-opts:
+      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+      short-id: aabb
+    client-fingerprint: chrome
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc-tunnel
+  - name: "🇩🇪 LTE | WAIcore | #7"
+    type: vless
+    server: 95.85.232.112
+    port: 443
+    uuid: dabb9a19-03ab-4cdf-8963-d3c45eb0f80d
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: duchland1.vodniki.monster
+    reality-opts:
+      public-key: EYfpgja4VjpLUnWHtDJQ1XZk6xL5j4rXwf80Sw6keV0
+      short-id: 0c13e8822e7f58aa
+    client-fingerprint: chrome
+  - name: "🇩🇪 LTE | UAB | #8"
+    type: vless
+    server: 88.216.190.206
+    port: 443
+    uuid: 2f600710-9f4e-4eab-8de1-89f60a878e55
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: app4.goonars.com
+    reality-opts:
+      public-key: u51rZT5vJj8nO80QBBHVW2-WA5OzzQ1eL6euvszWLQI
+      short-id: 09ef88a6
+    client-fingerprint: firefox
+  - name: "🇬🇧 LTE | GCI | #9"
+    type: vless
+    server: 82.152.223.130
+    port: 443
+    uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: public-auth.savesafe.cc
+    reality-opts:
+      public-key: YULPgY4Knu4LVqKcc2uhzTcndqIWWKr74W1dVXcLQ0c
+      short-id: c37c2ae6f6eb0d71
+    client-fingerprint: firefox
+  - name: "🇲🇩 LTE | JSC | #10"
     type: vless
     server: 89.35.14.32
     port: 443
@@ -164,38 +146,20 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: stats.v2.PushService
-  - name: "🇺🇦 LTE | "Cloud | #12"
+  - name: "🇬🇧 LTE | GCI | #11"
     type: vless
-    server: 91.224.87.22
-    port: 9873
-    uuid: 76186f1e-3062-4a2b-98c2-fab3c61a9511
-    udp: true
-    tls: true
-    servername: dl.google.com
-    reality-opts:
-      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-      short-id: aabbccdd
-    client-fingerprint: chrome
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-tunnel
-  - name: "🇩🇪 LTE | Spacecore | #13"
-    type: vless
-    server: 80.76.43.245
+    server: 82.152.223.140
     port: 443
-    uuid: 8c105407-82fb-4dd1-8df4-916d34a7d3fe
+    uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
     udp: true
+    flow: xtls-rprx-vision
     tls: true
-    servername: www.google.com
+    servername: public-auth.savesafe.cc
     reality-opts:
-      public-key: sJTPQLMDCyPAbRcaJM-P8Y3_xRVpEEGrvv-kkIuIuQE
-      short-id: ""
-    client-fingerprint: qq
-    network: http
-    http-opts:
-      path:
-        - /
-  - name: "🇱🇹 LTE | UAB | #14"
+      public-key: YULPgY4Knu4LVqKcc2uhzTcndqIWWKr74W1dVXcLQ0c
+      short-id: c37c2ae6f6eb0d71
+    client-fingerprint: firefox
+  - name: "🇱🇹 LTE | UAB | #12"
     type: vless
     server: 84.32.151.203
     port: 443
@@ -208,7 +172,22 @@ proxies:
       public-key: vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk
       short-id: 4fa44664f6a566d3
     client-fingerprint: firefox
-  - name: "🇵🇱 LTE | OC | #15"
+  - name: "🇺🇦 LTE | "Cloud | #13"
+    type: vless
+    server: 91.224.86.107
+    port: 9830
+    uuid: 76186f1e-3062-4a2b-98c2-fab3c61a9511
+    udp: true
+    tls: true
+    servername: dl.google.com
+    reality-opts:
+      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+      short-id: aabbccdd
+    client-fingerprint: firefox
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc-tunnel
+  - name: "🇵🇱 LTE | OC | #14"
     type: vless
     server: 2.27.244.94
     port: 443
@@ -224,20 +203,7 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🌐 LTE | fl.windconnect | #16"
-    type: vless
-    server: fl.windconnect.pro
-    port: 443
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: fl.windconnect.pro
-    reality-opts:
-      public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
-      short-id: 3c6ec7b2d73a28b6
-    client-fingerprint: edge
-  - name: "🌐 LTE | lt.superbuba.t | #17"
+  - name: "🌐 LTE | lt.superbuba.t | #15"
     type: vless
     server: lt.superbuba.top
     port: 443
@@ -250,18 +216,66 @@ proxies:
       public-key: vrcsm8L_tY7sNbnCEdLCEjOthh_w9bdWS3wFPgsIomk
       short-id: 4fa44664f6a566d3
     client-fingerprint: firefox
-  - name: "🇩🇪 Универсальный | Hetzner | #18"
+  - name: "🇺🇦 LTE | "Cloud | #16"
     type: vless
-    server: 91.107.188.158
-    port: 8080
-    uuid: 11af1c47-865a-47c6-92ff-118013655d78
+    server: 91.224.87.22
+    port: 9873
+    uuid: 76186f1e-3062-4a2b-98c2-fab3c61a9511
     udp: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: 91.107.188.158
-  - name: "🌐 LTE | au.windconnect | #19"
+    tls: true
+    servername: dl.google.com
+    reality-opts:
+      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+      short-id: aabbccdd
+    client-fingerprint: chrome
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc-tunnel
+  - name: "🇩🇪 LTE | Spacecore | #17"
+    type: vless
+    server: 80.76.43.245
+    port: 443
+    uuid: 8c105407-82fb-4dd1-8df4-916d34a7d3fe
+    udp: true
+    tls: true
+    servername: www.google.com
+    reality-opts:
+      public-key: sJTPQLMDCyPAbRcaJM-P8Y3_xRVpEEGrvv-kkIuIuQE
+      short-id: ""
+    client-fingerprint: qq
+    network: http
+    http-opts:
+      path:
+        - /
+  - name: "🌐 LTE | fl.windconnect | #18"
+    type: vless
+    server: fl.windconnect.pro
+    port: 443
+    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: fl.windconnect.pro
+    reality-opts:
+      public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
+      short-id: 3c6ec7b2d73a28b6
+    client-fingerprint: edge
+  - name: "🇷🇺 LTE | "Cloud | #19"
+    type: vless
+    server: 46.16.36.222
+    port: 11448
+    uuid: d7430ae7-320c-4658-808b-3006d0627d82
+    udp: true
+    tls: true
+    servername: mageia.ubuntuhosting.host
+    reality-opts:
+      public-key: gUU8rOYxXtE2ENvQ-RLrmaON2lw2L9lObStu-EaJxhs
+      short-id: b34f41089f1e
+    client-fingerprint: ios
+    network: grpc
+    grpc-opts:
+      grpc-service-name: gun
+  - name: "🌐 LTE | au.windconnect | #20"
     type: vless
     server: au.windconnect.pro
     port: 443
@@ -274,7 +288,7 @@ proxies:
       public-key: PRI6DIxzjOdhvjhxABjAMHw3ZwkPb3sJWCX3ue-aC3k
       short-id: 501fd3414c9f9f58
     client-fingerprint: edge
-  - name: "🌐 LTE | au.windconnect | #20"
+  - name: "🌐 LTE | au.windconnect | #21"
     type: vless
     server: au.windconnect.pro
     port: 12200
@@ -287,33 +301,7 @@ proxies:
       public-key: Kjw_K41-jWxqzAMtOby5y0KREhyjybuHsAHfCEFo6Sc
       short-id: 222afa5374b722b9
     client-fingerprint: firefox
-  - name: "🇬🇧 LTE | GCI | #21"
-    type: vless
-    server: 82.152.223.130
-    port: 443
-    uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: public-auth.savesafe.cc
-    reality-opts:
-      public-key: YULPgY4Knu4LVqKcc2uhzTcndqIWWKr74W1dVXcLQ0c
-      short-id: c37c2ae6f6eb0d71
-    client-fingerprint: firefox
-  - name: "🇬🇧 LTE | GCI | #22"
-    type: vless
-    server: 82.152.223.140
-    port: 443
-    uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: public-auth.savesafe.cc
-    reality-opts:
-      public-key: YULPgY4Knu4LVqKcc2uhzTcndqIWWKr74W1dVXcLQ0c
-      short-id: c37c2ae6f6eb0d71
-    client-fingerprint: firefox
-  - name: "🇩🇪 LTE | SERV.HOST | #23"
+  - name: "🇩🇪 LTE | SERV.HOST | #22"
     type: vless
     server: 31.76.64.248
     port: 443
@@ -326,49 +314,44 @@ proxies:
       public-key: 9OV_GN4lgwY_4llPfYCGev-PPXLMj-hfYnveKF4tjws
       short-id: f8
     client-fingerprint: firefox
-  - name: "🇺🇦 LTE | "Cloud | #24"
+  - name: "🇩🇪 Универсальный | Hetzner | #23"
     type: vless
-    server: 91.224.86.107
-    port: 9830
-    uuid: 76186f1e-3062-4a2b-98c2-fab3c61a9511
+    server: 91.107.188.158
+    port: 8080
+    uuid: 11af1c47-865a-47c6-92ff-118013655d78
     udp: true
-    tls: true
-    servername: dl.google.com
-    reality-opts:
-      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-      short-id: aabbccdd
-    client-fingerprint: firefox
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-tunnel
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: 91.107.188.158
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
-      - "🇳🇱 LTE | PJSC | #1"
-      - "🇷🇺 LTE | JSC | #2"
-      - "🇷🇺 LTE | JSC | #3"
-      - "🌐 LTE | wl-1.myfreedom | #4"
-      - "🇺🇦 LTE | "Cloud | #5"
-      - "🇷🇺 LTE | "Cloud | #6"
-      - "🇷🇺 LTE | "Cloud | #7"
-      - "🇩🇪 LTE | WAIcore | #8"
-      - "🇩🇪 LTE | UAB | #9"
-      - "🇳🇱 LTE | OC | #10"
-      - "🇲🇩 LTE | JSC | #11"
-      - "🇺🇦 LTE | "Cloud | #12"
-      - "🇩🇪 LTE | Spacecore | #13"
-      - "🇱🇹 LTE | UAB | #14"
-      - "🇵🇱 LTE | OC | #15"
-      - "🌐 LTE | fl.windconnect | #16"
-      - "🌐 LTE | lt.superbuba.t | #17"
-      - "🇩🇪 Универсальный | Hetzner | #18"
-      - "🌐 LTE | au.windconnect | #19"
+      - "🇷🇺 LTE | JSC | #1"
+      - "🇷🇺 LTE | "Cloud | #2"
+      - "🌐 LTE | wl-1.myfreedom | #3"
+      - "🇷🇺 LTE | JSC | #4"
+      - "🇳🇱 LTE | OC | #5"
+      - "🇺🇦 LTE | "Cloud | #6"
+      - "🇩🇪 LTE | WAIcore | #7"
+      - "🇩🇪 LTE | UAB | #8"
+      - "🇬🇧 LTE | GCI | #9"
+      - "🇲🇩 LTE | JSC | #10"
+      - "🇬🇧 LTE | GCI | #11"
+      - "🇱🇹 LTE | UAB | #12"
+      - "🇺🇦 LTE | "Cloud | #13"
+      - "🇵🇱 LTE | OC | #14"
+      - "🌐 LTE | lt.superbuba.t | #15"
+      - "🇺🇦 LTE | "Cloud | #16"
+      - "🇩🇪 LTE | Spacecore | #17"
+      - "🌐 LTE | fl.windconnect | #18"
+      - "🇷🇺 LTE | "Cloud | #19"
       - "🌐 LTE | au.windconnect | #20"
-      - "🇬🇧 LTE | GCI | #21"
-      - "🇬🇧 LTE | GCI | #22"
-      - "🇩🇪 LTE | SERV.HOST | #23"
-      - "🇺🇦 LTE | "Cloud | #24"
+      - "🌐 LTE | au.windconnect | #21"
+      - "🇩🇪 LTE | SERV.HOST | #22"
+      - "🇩🇪 Универсальный | Hetzner | #23"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -376,30 +359,29 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 Авто
-      - "🇳🇱 LTE | PJSC | #1"
-      - "🇷🇺 LTE | JSC | #2"
-      - "🇷🇺 LTE | JSC | #3"
-      - "🌐 LTE | wl-1.myfreedom | #4"
-      - "🇺🇦 LTE | "Cloud | #5"
-      - "🇷🇺 LTE | "Cloud | #6"
-      - "🇷🇺 LTE | "Cloud | #7"
-      - "🇩🇪 LTE | WAIcore | #8"
-      - "🇩🇪 LTE | UAB | #9"
-      - "🇳🇱 LTE | OC | #10"
-      - "🇲🇩 LTE | JSC | #11"
-      - "🇺🇦 LTE | "Cloud | #12"
-      - "🇩🇪 LTE | Spacecore | #13"
-      - "🇱🇹 LTE | UAB | #14"
-      - "🇵🇱 LTE | OC | #15"
-      - "🌐 LTE | fl.windconnect | #16"
-      - "🌐 LTE | lt.superbuba.t | #17"
-      - "🇩🇪 Универсальный | Hetzner | #18"
-      - "🌐 LTE | au.windconnect | #19"
+      - "🇷🇺 LTE | JSC | #1"
+      - "🇷🇺 LTE | "Cloud | #2"
+      - "🌐 LTE | wl-1.myfreedom | #3"
+      - "🇷🇺 LTE | JSC | #4"
+      - "🇳🇱 LTE | OC | #5"
+      - "🇺🇦 LTE | "Cloud | #6"
+      - "🇩🇪 LTE | WAIcore | #7"
+      - "🇩🇪 LTE | UAB | #8"
+      - "🇬🇧 LTE | GCI | #9"
+      - "🇲🇩 LTE | JSC | #10"
+      - "🇬🇧 LTE | GCI | #11"
+      - "🇱🇹 LTE | UAB | #12"
+      - "🇺🇦 LTE | "Cloud | #13"
+      - "🇵🇱 LTE | OC | #14"
+      - "🌐 LTE | lt.superbuba.t | #15"
+      - "🇺🇦 LTE | "Cloud | #16"
+      - "🇩🇪 LTE | Spacecore | #17"
+      - "🌐 LTE | fl.windconnect | #18"
+      - "🇷🇺 LTE | "Cloud | #19"
       - "🌐 LTE | au.windconnect | #20"
-      - "🇬🇧 LTE | GCI | #21"
-      - "🇬🇧 LTE | GCI | #22"
-      - "🇩🇪 LTE | SERV.HOST | #23"
-      - "🇺🇦 LTE | "Cloud | #24"
+      - "🌐 LTE | au.windconnect | #21"
+      - "🇩🇪 LTE | SERV.HOST | #22"
+      - "🇩🇪 Универсальный | Hetzner | #23"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
