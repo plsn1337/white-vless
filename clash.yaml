@@ -20,7 +20,20 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc
-  - name: "🇫🇮 Универсальный | Hetzner | #2"
+  - name: "🇳🇱 LTE | Eternity | #2"
+    type: vless
+    server: 94.183.208.158
+    port: 443
+    uuid: d2aeb078-90db-4f90-b334-623bcbea8d31
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: cdnjs.cloudflare.com
+    reality-opts:
+      public-key: qJzNbNVsTx5TLS9d-0kygrHnUSv1vhzTZLn5a192JU0
+      short-id: e018b609c12facbe
+    client-fingerprint: firefox
+  - name: "🇫🇮 Универсальный | Hetzner | #3"
     type: vless
     server: 65.109.238.140
     port: 443
@@ -33,7 +46,7 @@ proxies:
     http-opts:
       path:
         - /api/v3/stream/
-  - name: "🇳🇱 LTE | Hostkey | #3"
+  - name: "🇳🇱 LTE | Hostkey | #4"
     type: vless
     server: 89.40.70.124
     port: 443
@@ -46,7 +59,20 @@ proxies:
       public-key: 2UHMR3ko8nBUTbZpQrvWP9ylSmcAj5YXSNG_o-N8EW8
       short-id: 5b33d3e71a14f4
     client-fingerprint: firefox
-  - name: "🇺🇦 LTE | "Cloud | #4"
+  - name: "🇩🇪 LTE | SERV.HOST | #5"
+    type: vless
+    server: 31.76.64.248
+    port: 443
+    uuid: 0a322246-8c1a-47cd-9865-cccebbb2e5c1
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: blog.api.www.cloudflare.com
+    reality-opts:
+      public-key: 9OV_GN4lgwY_4llPfYCGev-PPXLMj-hfYnveKF4tjws
+      short-id: f8
+    client-fingerprint: firefox
+  - name: "🇺🇦 LTE | "Cloud | #6"
     type: vless
     server: 91.224.86.107
     port: 9830
@@ -61,7 +87,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-tunnel
-  - name: "🇺🇦 LTE | "Cloud | #5"
+  - name: "🇺🇦 LTE | "Cloud | #7"
     type: vless
     server: 91.224.87.22
     port: 9873
@@ -76,20 +102,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-tunnel
-  - name: "🇳🇱 LTE | Eternity | #6"
-    type: vless
-    server: 94.183.208.158
-    port: 443
-    uuid: d2aeb078-90db-4f90-b334-623bcbea8d31
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: cdnjs.cloudflare.com
-    reality-opts:
-      public-key: qJzNbNVsTx5TLS9d-0kygrHnUSv1vhzTZLn5a192JU0
-      short-id: e018b609c12facbe
-    client-fingerprint: firefox
-  - name: "🇺🇦 LTE | Global | #7"
+  - name: "🇺🇦 LTE | Global | #8"
     type: vless
     server: 78.159.240.41
     port: 443
@@ -104,31 +117,18 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: vless-grpc-reality
-  - name: "🇩🇪 LTE | SERV.HOST | #8"
-    type: vless
-    server: 31.76.64.248
-    port: 443
-    uuid: 0a322246-8c1a-47cd-9865-cccebbb2e5c1
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: blog.api.www.cloudflare.com
-    reality-opts:
-      public-key: 9OV_GN4lgwY_4llPfYCGev-PPXLMj-hfYnveKF4tjws
-      short-id: f8
-    client-fingerprint: firefox
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
       - "🇷🇺 LTE | "Domain | #1"
-      - "🇫🇮 Универсальный | Hetzner | #2"
-      - "🇳🇱 LTE | Hostkey | #3"
-      - "🇺🇦 LTE | "Cloud | #4"
-      - "🇺🇦 LTE | "Cloud | #5"
-      - "🇳🇱 LTE | Eternity | #6"
-      - "🇺🇦 LTE | Global | #7"
-      - "🇩🇪 LTE | SERV.HOST | #8"
+      - "🇳🇱 LTE | Eternity | #2"
+      - "🇫🇮 Универсальный | Hetzner | #3"
+      - "🇳🇱 LTE | Hostkey | #4"
+      - "🇩🇪 LTE | SERV.HOST | #5"
+      - "🇺🇦 LTE | "Cloud | #6"
+      - "🇺🇦 LTE | "Cloud | #7"
+      - "🇺🇦 LTE | Global | #8"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -137,13 +137,13 @@ proxy-groups:
     proxies:
       - 🚀 Авто
       - "🇷🇺 LTE | "Domain | #1"
-      - "🇫🇮 Универсальный | Hetzner | #2"
-      - "🇳🇱 LTE | Hostkey | #3"
-      - "🇺🇦 LTE | "Cloud | #4"
-      - "🇺🇦 LTE | "Cloud | #5"
-      - "🇳🇱 LTE | Eternity | #6"
-      - "🇺🇦 LTE | Global | #7"
-      - "🇩🇪 LTE | SERV.HOST | #8"
+      - "🇳🇱 LTE | Eternity | #2"
+      - "🇫🇮 Универсальный | Hetzner | #3"
+      - "🇳🇱 LTE | Hostkey | #4"
+      - "🇩🇪 LTE | SERV.HOST | #5"
+      - "🇺🇦 LTE | "Cloud | #6"
+      - "🇺🇦 LTE | "Cloud | #7"
+      - "🇺🇦 LTE | Global | #8"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
