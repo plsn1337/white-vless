@@ -5,19 +5,19 @@ mode: rule
 log-level: warning
 external-controller: "127.0.0.1:9090"
 proxies:
-  - name: "🇳🇱 LTE | FDCservers.net | #1"
+  - name: "🇺🇸 Универсальный | Cloudflare, | #1"
     type: vless
-    server: 50.7.177.20
+    server: 8.6.112.0
     port: 443
-    uuid: 0afcdc48-917d-47e8-8adb-cbe6908baede
+    uuid: cc4496b3-59db-4f40-b18c-6fa1c79985a0
     udp: true
-    flow: xtls-rprx-vision
     tls: true
-    servername: nl1.dzen-services.com
-    reality-opts:
-      public-key: xgjh4INLejIsR8DCnlOOKV9nK6fKIg1TtB5hhYfahhs
-      short-id: 81ea
-    client-fingerprint: chrome
+    servername: 51.baklajann.ru
+    skip-cert-verify: true
+    network: http
+    http-opts:
+      path:
+        - /
   - name: "🇷🇺 LTE | Kontel | #2"
     type: vless
     server: 46.8.209.137
@@ -34,20 +34,80 @@ proxies:
     http-opts:
       path:
         - /api/v3/events/
-  - name: "🇫🇮 Универсальный | Hetzner | #3"
+  - name: "🇳🇱 LTE | Hostkey | #3"
     type: vless
-    server: 65.109.238.140
+    server: 89.40.70.124
     port: 443
-    uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
+    uuid: a5c761a5-ea2d-4af4-ab42-a9f85def664e
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.sony.co.uk
+    reality-opts:
+      public-key: 2UHMR3ko8nBUTbZpQrvWP9ylSmcAj5YXSNG_o-N8EW8
+      short-id: 5b33d3e71a14f4
+    client-fingerprint: firefox
+  - name: "🇫🇮 Универсальный | Play2go | #4"
+    type: vless
+    server: 31.76.21.44
+    port: 443
+    uuid: 3a42d8f9-12ce-5345-bfdb-5a5c605c2da5
     udp: true
     tls: true
-    servername: hel1.nordlinkcloud.com
+    servername: 31.76.21.44.fwqfw783rg2dad.website
     skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /api/v3/stream/
-  - name: "🇺🇦 LTE | "Cloud | #4"
+    network: ws
+    ws-opts:
+      path: /websocket
+      headers:
+        Host: 31.76.21.44
+  - name: "🇵🇱 Сервер | FDCservers.net | #5"
+    type: vless
+    server: 50.7.249.170
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: pl1-ded.moritech.net
+    skip-cert-verify: true
+  - name: "🇫🇷 LTE | FDCservers.net | #6"
+    type: vless
+    server: 50.7.245.35
+    port: 443
+    uuid: 5d4a87fa-16f1-4b65-b217-225a31e36239
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: fr.convert-flow.net
+    reality-opts:
+      public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
+      short-id: 00a61d55a07de885
+    client-fingerprint: firefox
+  - name: "🇵🇱 Сервер | FDCservers.net | #7"
+    type: vless
+    server: 50.7.249.178
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: pl2-ded.moritech.net
+    skip-cert-verify: true
+  - name: "🇸🇪 LTE | InterConnects | #8"
+    type: vless
+    server: 5.157.10.146
+    port: 443
+    uuid: 732255eb-8ce9-4cd5-8bdc-376bd3fa0b11
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: sweb1.loozerp.wiki
+    reality-opts:
+      public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
+      short-id: fb442438e2223836
+    client-fingerprint: firefox
+  - name: "🇺🇦 LTE | "Cloud | #9"
     type: vless
     server: 91.224.86.107
     port: 9830
@@ -62,7 +122,37 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-tunnel
-  - name: "🌐 LTE | fl.windconnect | #5"
+  - name: "🇺🇦 LTE | "Cloud | #10"
+    type: vless
+    server: 91.224.87.22
+    port: 9873
+    uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+    udp: true
+    tls: true
+    servername: dl.google.com
+    reality-opts:
+      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+      short-id: aabb
+    client-fingerprint: firefox
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc-tunnel
+  - name: "🇷🇺 LTE | Aeza | #11"
+    type: vless
+    server: 77.110.104.125
+    port: 443
+    uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b
+    udp: true
+    tls: true
+    servername: maps.apple.com
+    reality-opts:
+      public-key: gr7DAOBqoNiHEUhWZQh3nSqBOmg6QwmRC0HKj7TOsUk
+      short-id: 2da4299da566b7
+    client-fingerprint: chrome
+    network: grpc
+    grpc-opts:
+      grpc-service-name: your-custom-path
+  - name: "🌐 LTE | fl.windconnect | #12"
     type: vless
     server: fl.windconnect.pro
     port: 443
@@ -75,82 +165,7 @@ proxies:
       public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
       short-id: 3c6ec7b2d73a28b6
     client-fingerprint: edge
-  - name: "🌐 LTE | au.windconnect | #6"
-    type: vless
-    server: au.windconnect.pro
-    port: 12200
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: au.windconnect.pro
-    reality-opts:
-      public-key: Kjw_K41-jWxqzAMtOby5y0KREhyjybuHsAHfCEFo6Sc
-      short-id: 222afa5374b722b9
-    client-fingerprint: firefox
-  - name: "🌐 LTE | au.windconnect | #7"
-    type: vless
-    server: au.windconnect.pro
-    port: 443
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: au.windconnect.pro
-    reality-opts:
-      public-key: PRI6DIxzjOdhvjhxABjAMHw3ZwkPb3sJWCX3ue-aC3k
-      short-id: 501fd3414c9f9f58
-    client-fingerprint: edge
-  - name: "🇩🇪 Сервер | Hetzner | #8"
-    type: vless
-    server: 91.99.58.134
-    port: 443
-    uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
-    udp: true
-  - name: "🇩🇪 Сервер | Hetzner | #9"
-    type: vless
-    server: 91.99.50.192
-    port: 443
-    uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
-    udp: true
-  - name: "🇰🇿 LTE | G-Core | #10"
-    type: vless
-    server: 45.82.31.129
-    port: 192
-    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: fyu.bazaragelbazara.cfd
-    reality-opts:
-      public-key: t59o65kEgrYZDGHg3AayZmzmNMsTI8LIqfRXopVyCAY
-      short-id: ""
-    client-fingerprint: chrome
-  - name: "🇩🇪 Сервер | Hetzner | #11"
-    type: vless
-    server: 46.224.1.83
-    port: 443
-    uuid: cf990ae8-ee77-4436-aa3a-bbc2fb040c53
-    udp: true
-  - name: "🇰🇿 LTE | G-Core | #12"
-    type: vless
-    server: 45.82.31.129
-    port: 191
-    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
-    udp: true
-    tls: true
-    servername: on.amusnetnot.site
-    reality-opts:
-      public-key: t59o65kEgrYZDGHg3AayZmzmNMsTI8LIqfRXopVyCAY
-      short-id: ""
-    client-fingerprint: chrome
-  - name: "🇰🇿 Сервер | G-Core | #13"
-    type: vless
-    server: 45.82.31.129
-    port: 196
-    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
-    udp: true
-  - name: "🇳🇱 LTE | Eternity | #14"
+  - name: "🇳🇱 LTE | Eternity | #13"
     type: vless
     server: 94.183.208.158
     port: 443
@@ -163,31 +178,75 @@ proxies:
       public-key: qJzNbNVsTx5TLS9d-0kygrHnUSv1vhzTZLn5a192JU0
       short-id: e018b609c12facbe
     client-fingerprint: firefox
-  - name: "🇷🇺 Сервер | EuroByte | #15"
+  - name: "🇩🇪 Универсальный | Hetzner | #14"
     type: vless
-    server: 91.218.230.240
-    port: 20443
-    uuid: d4719d52-c3fc-4651-98e1-535dbd77dbcf
+    server: 91.107.188.158
+    port: 8080
+    uuid: 11af1c47-865a-47c6-92ff-118013655d78
     udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: 91.107.188.158
+  - name: "🇩🇪 Универсальный | Hetzner | #15"
+    type: vless
+    server: 91.107.154.19
+    port: 8080
+    uuid: 11af1c47-865a-47c6-92ff-118013655d78
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: 91.107.154.19
+  - name: "🇷🇺 Универсальный | JSC | #16"
+    type: vless
+    server: 91.210.169.181
+    port: 443
+    uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+    udp: true
+    tls: true
+    servername: wstg.datasynctrue.online
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/connect
+      headers:
+        Host: wstg.datasynctrue.online
+  - name: "🇵🇱 LTE | Eternity | #17"
+    type: vless
+    server: 94.183.209.33
+    port: 8443
+    uuid: f4ba862a-4d64-431a-9213-dd7aaafd476a
+    udp: true
+    tls: true
+    servername: timeline.www.cloudflare.com
+    reality-opts:
+      public-key: S_13TsXuoNyvkx6uf7JHJeuPX3G-nmSRMzn_hgcF3mk
+      short-id: bafa6f22a3
+    client-fingerprint: firefox
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
-      - "🇳🇱 LTE | FDCservers.net | #1"
+      - "🇺🇸 Универсальный | Cloudflare, | #1"
       - "🇷🇺 LTE | Kontel | #2"
-      - "🇫🇮 Универсальный | Hetzner | #3"
-      - "🇺🇦 LTE | "Cloud | #4"
-      - "🌐 LTE | fl.windconnect | #5"
-      - "🌐 LTE | au.windconnect | #6"
-      - "🌐 LTE | au.windconnect | #7"
-      - "🇩🇪 Сервер | Hetzner | #8"
-      - "🇩🇪 Сервер | Hetzner | #9"
-      - "🇰🇿 LTE | G-Core | #10"
-      - "🇩🇪 Сервер | Hetzner | #11"
-      - "🇰🇿 LTE | G-Core | #12"
-      - "🇰🇿 Сервер | G-Core | #13"
-      - "🇳🇱 LTE | Eternity | #14"
-      - "🇷🇺 Сервер | EuroByte | #15"
+      - "🇳🇱 LTE | Hostkey | #3"
+      - "🇫🇮 Универсальный | Play2go | #4"
+      - "🇵🇱 Сервер | FDCservers.net | #5"
+      - "🇫🇷 LTE | FDCservers.net | #6"
+      - "🇵🇱 Сервер | FDCservers.net | #7"
+      - "🇸🇪 LTE | InterConnects | #8"
+      - "🇺🇦 LTE | "Cloud | #9"
+      - "🇺🇦 LTE | "Cloud | #10"
+      - "🇷🇺 LTE | Aeza | #11"
+      - "🌐 LTE | fl.windconnect | #12"
+      - "🇳🇱 LTE | Eternity | #13"
+      - "🇩🇪 Универсальный | Hetzner | #14"
+      - "🇩🇪 Универсальный | Hetzner | #15"
+      - "🇷🇺 Универсальный | JSC | #16"
+      - "🇵🇱 LTE | Eternity | #17"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -195,21 +254,23 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 Авто
-      - "🇳🇱 LTE | FDCservers.net | #1"
+      - "🇺🇸 Универсальный | Cloudflare, | #1"
       - "🇷🇺 LTE | Kontel | #2"
-      - "🇫🇮 Универсальный | Hetzner | #3"
-      - "🇺🇦 LTE | "Cloud | #4"
-      - "🌐 LTE | fl.windconnect | #5"
-      - "🌐 LTE | au.windconnect | #6"
-      - "🌐 LTE | au.windconnect | #7"
-      - "🇩🇪 Сервер | Hetzner | #8"
-      - "🇩🇪 Сервер | Hetzner | #9"
-      - "🇰🇿 LTE | G-Core | #10"
-      - "🇩🇪 Сервер | Hetzner | #11"
-      - "🇰🇿 LTE | G-Core | #12"
-      - "🇰🇿 Сервер | G-Core | #13"
-      - "🇳🇱 LTE | Eternity | #14"
-      - "🇷🇺 Сервер | EuroByte | #15"
+      - "🇳🇱 LTE | Hostkey | #3"
+      - "🇫🇮 Универсальный | Play2go | #4"
+      - "🇵🇱 Сервер | FDCservers.net | #5"
+      - "🇫🇷 LTE | FDCservers.net | #6"
+      - "🇵🇱 Сервер | FDCservers.net | #7"
+      - "🇸🇪 LTE | InterConnects | #8"
+      - "🇺🇦 LTE | "Cloud | #9"
+      - "🇺🇦 LTE | "Cloud | #10"
+      - "🇷🇺 LTE | Aeza | #11"
+      - "🌐 LTE | fl.windconnect | #12"
+      - "🇳🇱 LTE | Eternity | #13"
+      - "🇩🇪 Универсальный | Hetzner | #14"
+      - "🇩🇪 Универсальный | Hetzner | #15"
+      - "🇷🇺 Универсальный | JSC | #16"
+      - "🇵🇱 LTE | Eternity | #17"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
