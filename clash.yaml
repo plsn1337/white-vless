@@ -5,20 +5,7 @@ mode: rule
 log-level: warning
 external-controller: "127.0.0.1:9090"
 proxies:
-  - name: "🇰🇿 LTE | G-Core | #1"
-    type: vless
-    server: 45.82.31.129
-    port: 192
-    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: fyu.bazaragelbazara.cfd
-    reality-opts:
-      public-key: t59o65kEgrYZDGHg3AayZmzmNMsTI8LIqfRXopVyCAY
-      short-id: ""
-    client-fingerprint: chrome
-  - name: "🇳🇱 LTE | FDCservers.net | #2"
+  - name: "🇳🇱 LTE | FDCservers.net | #1"
     type: vless
     server: 50.7.177.20
     port: 443
@@ -31,6 +18,19 @@ proxies:
       public-key: xgjh4INLejIsR8DCnlOOKV9nK6fKIg1TtB5hhYfahhs
       short-id: 81ea
     client-fingerprint: chrome
+  - name: "🇫🇮 Универсальный | Hetzner | #2"
+    type: vless
+    server: 65.109.238.140
+    port: 443
+    uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
+    udp: true
+    tls: true
+    servername: hel1.nordlinkcloud.com
+    skip-cert-verify: true
+    network: http
+    http-opts:
+      path:
+        - /api/v3/stream/
   - name: "🇳🇱 LTE | Eternity | #3"
     type: vless
     server: 94.183.208.158
@@ -59,101 +59,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-tunnel
-  - name: "🌐 LTE | fl.windconnect | #5"
-    type: vless
-    server: fl.windconnect.pro
-    port: 443
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: fl.windconnect.pro
-    reality-opts:
-      public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
-      short-id: 3c6ec7b2d73a28b6
-    client-fingerprint: edge
-  - name: "🌐 LTE | au.windconnect | #6"
-    type: vless
-    server: au.windconnect.pro
-    port: 12200
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: au.windconnect.pro
-    reality-opts:
-      public-key: Kjw_K41-jWxqzAMtOby5y0KREhyjybuHsAHfCEFo6Sc
-      short-id: 222afa5374b722b9
-    client-fingerprint: firefox
-  - name: "🌐 LTE | au.windconnect | #7"
-    type: vless
-    server: au.windconnect.pro
-    port: 443
-    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: au.windconnect.pro
-    reality-opts:
-      public-key: PRI6DIxzjOdhvjhxABjAMHw3ZwkPb3sJWCX3ue-aC3k
-      short-id: 501fd3414c9f9f58
-    client-fingerprint: edge
-  - name: "🇫🇮 Универсальный | Hetzner | #8"
-    type: vless
-    server: 65.109.238.140
-    port: 443
-    uuid: 05bfcbaa-cba0-4bce-9103-09fe3f5f0667
-    udp: true
-    tls: true
-    servername: hel1.nordlinkcloud.com
-    skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /api/v3/stream/
-  - name: "🇰🇿 LTE | G-Core | #9"
-    type: vless
-    server: 45.82.31.129
-    port: 191
-    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
-    udp: true
-    tls: true
-    servername: on.amusnetnot.site
-    reality-opts:
-      public-key: t59o65kEgrYZDGHg3AayZmzmNMsTI8LIqfRXopVyCAY
-      short-id: ""
-    client-fingerprint: chrome
-  - name: "🇷🇺 Сервер | EuroByte | #10"
-    type: vless
-    server: 91.218.230.240
-    port: 20443
-    uuid: d4719d52-c3fc-4651-98e1-535dbd77dbcf
-    udp: true
-  - name: "🇩🇪 Сервер | Hetzner | #11"
-    type: vless
-    server: 91.99.50.192
-    port: 443
-    uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
-    udp: true
-  - name: "🇩🇪 Сервер | Hetzner | #12"
-    type: vless
-    server: 91.99.58.134
-    port: 443
-    uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
-    udp: true
-  - name: "🇩🇪 Сервер | Hetzner | #13"
-    type: vless
-    server: 46.224.1.83
-    port: 443
-    uuid: cf990ae8-ee77-4436-aa3a-bbc2fb040c53
-    udp: true
-  - name: "🇰🇿 Сервер | G-Core | #14"
-    type: vless
-    server: 45.82.31.129
-    port: 196
-    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
-    udp: true
-  - name: "🇷🇺 LTE | Kontel | #15"
+  - name: "🇷🇺 LTE | Kontel | #5"
     type: vless
     server: 46.8.209.137
     port: 18083
@@ -169,25 +75,119 @@ proxies:
     http-opts:
       path:
         - /api/v3/events/
+  - name: "🌐 LTE | fl.windconnect | #6"
+    type: vless
+    server: fl.windconnect.pro
+    port: 443
+    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: fl.windconnect.pro
+    reality-opts:
+      public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
+      short-id: 3c6ec7b2d73a28b6
+    client-fingerprint: edge
+  - name: "🇰🇿 LTE | G-Core | #7"
+    type: vless
+    server: 45.82.31.129
+    port: 192
+    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: fyu.bazaragelbazara.cfd
+    reality-opts:
+      public-key: t59o65kEgrYZDGHg3AayZmzmNMsTI8LIqfRXopVyCAY
+      short-id: ""
+    client-fingerprint: chrome
+  - name: "🇷🇺 Сервер | EuroByte | #8"
+    type: vless
+    server: 91.218.230.240
+    port: 20443
+    uuid: d4719d52-c3fc-4651-98e1-535dbd77dbcf
+    udp: true
+  - name: "🇩🇪 Сервер | Hetzner | #9"
+    type: vless
+    server: 91.99.50.192
+    port: 443
+    uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
+    udp: true
+  - name: "🇩🇪 Сервер | Hetzner | #10"
+    type: vless
+    server: 91.99.58.134
+    port: 443
+    uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
+    udp: true
+  - name: "🇰🇿 LTE | G-Core | #11"
+    type: vless
+    server: 45.82.31.129
+    port: 191
+    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
+    udp: true
+    tls: true
+    servername: on.amusnetnot.site
+    reality-opts:
+      public-key: t59o65kEgrYZDGHg3AayZmzmNMsTI8LIqfRXopVyCAY
+      short-id: ""
+    client-fingerprint: chrome
+  - name: "🇩🇪 Сервер | Hetzner | #12"
+    type: vless
+    server: 46.224.1.83
+    port: 443
+    uuid: cf990ae8-ee77-4436-aa3a-bbc2fb040c53
+    udp: true
+  - name: "🌐 LTE | au.windconnect | #13"
+    type: vless
+    server: au.windconnect.pro
+    port: 443
+    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: au.windconnect.pro
+    reality-opts:
+      public-key: PRI6DIxzjOdhvjhxABjAMHw3ZwkPb3sJWCX3ue-aC3k
+      short-id: 501fd3414c9f9f58
+    client-fingerprint: edge
+  - name: "🇰🇿 Сервер | G-Core | #14"
+    type: vless
+    server: 45.82.31.129
+    port: 196
+    uuid: 6cbc63c1-97de-4460-847c-7fd7bdda3fa6
+    udp: true
+  - name: "🌐 LTE | au.windconnect | #15"
+    type: vless
+    server: au.windconnect.pro
+    port: 12200
+    uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: au.windconnect.pro
+    reality-opts:
+      public-key: Kjw_K41-jWxqzAMtOby5y0KREhyjybuHsAHfCEFo6Sc
+      short-id: 222afa5374b722b9
+    client-fingerprint: firefox
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
-      - "🇰🇿 LTE | G-Core | #1"
-      - "🇳🇱 LTE | FDCservers.net | #2"
+      - "🇳🇱 LTE | FDCservers.net | #1"
+      - "🇫🇮 Универсальный | Hetzner | #2"
       - "🇳🇱 LTE | Eternity | #3"
       - "🇺🇦 LTE | "Cloud | #4"
-      - "🌐 LTE | fl.windconnect | #5"
-      - "🌐 LTE | au.windconnect | #6"
-      - "🌐 LTE | au.windconnect | #7"
-      - "🇫🇮 Универсальный | Hetzner | #8"
-      - "🇰🇿 LTE | G-Core | #9"
-      - "🇷🇺 Сервер | EuroByte | #10"
-      - "🇩🇪 Сервер | Hetzner | #11"
+      - "🇷🇺 LTE | Kontel | #5"
+      - "🌐 LTE | fl.windconnect | #6"
+      - "🇰🇿 LTE | G-Core | #7"
+      - "🇷🇺 Сервер | EuroByte | #8"
+      - "🇩🇪 Сервер | Hetzner | #9"
+      - "🇩🇪 Сервер | Hetzner | #10"
+      - "🇰🇿 LTE | G-Core | #11"
       - "🇩🇪 Сервер | Hetzner | #12"
-      - "🇩🇪 Сервер | Hetzner | #13"
+      - "🌐 LTE | au.windconnect | #13"
       - "🇰🇿 Сервер | G-Core | #14"
-      - "🇷🇺 LTE | Kontel | #15"
+      - "🌐 LTE | au.windconnect | #15"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -195,21 +195,21 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 Авто
-      - "🇰🇿 LTE | G-Core | #1"
-      - "🇳🇱 LTE | FDCservers.net | #2"
+      - "🇳🇱 LTE | FDCservers.net | #1"
+      - "🇫🇮 Универсальный | Hetzner | #2"
       - "🇳🇱 LTE | Eternity | #3"
       - "🇺🇦 LTE | "Cloud | #4"
-      - "🌐 LTE | fl.windconnect | #5"
-      - "🌐 LTE | au.windconnect | #6"
-      - "🌐 LTE | au.windconnect | #7"
-      - "🇫🇮 Универсальный | Hetzner | #8"
-      - "🇰🇿 LTE | G-Core | #9"
-      - "🇷🇺 Сервер | EuroByte | #10"
-      - "🇩🇪 Сервер | Hetzner | #11"
+      - "🇷🇺 LTE | Kontel | #5"
+      - "🌐 LTE | fl.windconnect | #6"
+      - "🇰🇿 LTE | G-Core | #7"
+      - "🇷🇺 Сервер | EuroByte | #8"
+      - "🇩🇪 Сервер | Hetzner | #9"
+      - "🇩🇪 Сервер | Hetzner | #10"
+      - "🇰🇿 LTE | G-Core | #11"
       - "🇩🇪 Сервер | Hetzner | #12"
-      - "🇩🇪 Сервер | Hetzner | #13"
+      - "🌐 LTE | au.windconnect | #13"
       - "🇰🇿 Сервер | G-Core | #14"
-      - "🇷🇺 LTE | Kontel | #15"
+      - "🌐 LTE | au.windconnect | #15"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
