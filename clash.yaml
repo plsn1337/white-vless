@@ -5,64 +5,22 @@ mode: rule
 log-level: warning
 external-controller: "127.0.0.1:9090"
 proxies:
-  - name: "🇩🇪 LTE | Spacecore | #1"
+  - name: "🇷🇺 LTE | JSC | #1"
     type: vless
-    server: 80.76.43.245
-    port: 443
-    uuid: 568addfa-796a-40f8-820d-a071ee2ca50a
+    server: 80.87.196.72
+    port: 2096
+    uuid: 617dc5cf-915f-43b2-a0d4-4057584d9d33
     udp: true
     tls: true
-    servername: www.google.com
+    servername: id.vk.com
     reality-opts:
-      public-key: sJTPQLMDCyPAbRcaJM-P8Y3_xRVpEEGrvv-kkIuIuQE
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
       short-id: ""
-    client-fingerprint: firefox
-    network: http
-    http-opts:
-      path:
-        - /
-  - name: "🇷🇺 LTE | LLC | #2"
-    type: vless
-    server: 95.163.214.43
-    port: 443
-    uuid: 88ce17fc-7c6c-43a7-98a4-33fb59697b17
-    udp: true
-    tls: true
-    servername: ok.ru
-    reality-opts:
-      public-key: VdG4ntV15FfNWV4rvSny2mvOTSXfOUVKHNC0dOyXY2s
-      short-id: 864fbb122f15b43d
-    client-fingerprint: firefox
-    network: http
-    http-opts:
-      path:
-        - /api/v1/e0163615
-  - name: "🇷🇺 Универсальный | "Domain | #3"
-    type: vless
-    server: 95.163.232.171
-    port: 14443
-    uuid: fb67fd37-8d41-43a9-a093-c0b807fc5299
-    udp: true
-    tls: true
-    servername: pr-media.pepro.site
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: pr-media.pepro.site
-  - name: "🌐 Универсальный | fi.snobvpn.onl | #4"
-    type: vless
-    server: fi.snobvpn.online
-    port: 80
-    uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
-    udp: true
-    network: ws
-    ws-opts:
-      path: /snob-ws
-      headers:
-        Host: fi.snobvpn.online
-  - name: "🇷🇺 LTE | Selectel | #5"
+    client-fingerprint: edge
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vless-grpc-reality
+  - name: "🇷🇺 LTE | Selectel | #2"
     type: vless
     server: 5.188.114.71
     port: 443
@@ -75,19 +33,33 @@ proxies:
       public-key: syAjY9zGryzG39wg8A4EvtKRsp506hton8cYp7eZ43g
       short-id: 7a3f9e2b1c8d4f6a
     client-fingerprint: firefox
-  - name: "🇳🇱 LTE | Baxet | #6"
+  - name: "🇷🇺 LTE | JSC | #3"
     type: vless
-    server: 89.125.147.199
-    port: 443
-    uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+    server: 80.87.195.166
+    port: 2096
+    uuid: 617dc5cf-915f-43b2-a0d4-4057584d9d33
     udp: true
     tls: true
-    servername: maps.apple.com
+    servername: id.vk.com
     reality-opts:
-      public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
-      short-id: a1b2c3d4
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      short-id: ""
     client-fingerprint: firefox
-  - name: "🇬🇧 LTE | GTT | #7"
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vless-grpc-reality
+  - name: "🌐 Универсальный | fi.snobvpn.onl | #4"
+    type: vless
+    server: fi.snobvpn.online
+    port: 80
+    uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+    udp: true
+    network: ws
+    ws-opts:
+      path: /snob-ws
+      headers:
+        Host: fi.snobvpn.online
+  - name: "🇬🇧 LTE | GTT | #5"
     type: vless
     server: 87.84.232.240
     port: 443
@@ -98,11 +70,23 @@ proxies:
     servername: cdn4-81.taobao.com
     reality-opts:
       public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw
-      short-id: 0dc0ced5bf4f756c
+      short-id: 3c9c5d01c6f824dd
     client-fingerprint: firefox
-  - name: "🇵🇱 LTE | OC | #8"
+  - name: "🇳🇱 LTE | Baxet | #6"
     type: vless
-    server: 2.27.244.94
+    server: 89.125.147.199
+    port: 443
+    uuid: 246b101b-4e4a-451f-8e9c-5e8d3b64b4ef
+    udp: true
+    tls: true
+    servername: maps.apple.com
+    reality-opts:
+      public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+      short-id: f6c7c139b9c938db
+    client-fingerprint: firefox
+  - name: "🇵🇱 LTE | OC | #7"
+    type: vless
+    server: 95.85.253.208
     port: 443
     uuid: 568addfa-796a-40f8-820d-a071ee2ca50a
     udp: true
@@ -116,18 +100,31 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🇳🇱 LTE | Eternity | #9"
+  - name: "🇺🇸 LTE | Netgrid | #8"
     type: vless
-    server: 94.183.208.158
+    server: 45.91.138.179
     port: 443
-    uuid: d2aeb078-90db-4f90-b334-623bcbea8d31
+    uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: cdnjs.cloudflare.com
+    servername: us05.shifor01.life
     reality-opts:
-      public-key: qJzNbNVsTx5TLS9d-0kygrHnUSv1vhzTZLn5a192JU0
-      short-id: e018b609c12facbe
+      public-key: 36sTeaLdaAjQQxxzh492XihoPi2YxmttQyncmLuxYHE
+      short-id: 169fc2df88419465
+    client-fingerprint: firefox
+  - name: "🇫🇮 LTE | Play2go | #9"
+    type: vless
+    server: 31.76.80.75
+    port: 443
+    uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: fin.pinkmoon.pro
+    reality-opts:
+      public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
+      short-id: 8ffa160e608bf539
     client-fingerprint: firefox
   - name: "🌐 LTE | de-xh02.tcp-re | #10"
     type: vless
@@ -145,15 +142,19 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🇬🇧 Универсальный | FDCservers.net | #11"
+  - name: "🇩🇪 LTE | Play2go | #11"
     type: vless
-    server: 66.90.105.210
-    port: 2083
-    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    server: 89.39.121.239
+    port: 443
+    uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
     udp: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vless
+    flow: xtls-rprx-vision
+    tls: true
+    servername: de.pinkmoon.pro
+    reality-opts:
+      public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
+      short-id: 8ffa160e608bf539
+    client-fingerprint: firefox
   - name: "🇬🇧 Универсальный | FDCservers.net | #12"
     type: vless
     server: 66.90.104.42
@@ -163,20 +164,26 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: vless
-  - name: "🌐 LTE | de.pinkmoon.pr | #13"
+  - name: "🇬🇧 Универсальный | FDCservers.net | #13"
     type: vless
-    server: de.pinkmoon.pro
+    server: 66.90.105.210
+    port: 2083
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    udp: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vless
+  - name: "🌐 Сервер | ir-new.failspa | #14"
+    type: vless
+    server: ir-new.failspace.top
     port: 443
-    uuid: 6414b225-af87-428a-8a67-e3e8995fe4f5
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: de.pinkmoon.pro
-    reality-opts:
-      public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
-      short-id: 8ffa160e608bf539
-    client-fingerprint: qq
-  - name: "🇺🇦 LTE | "Cloud | #14"
+    servername: ir-new.failspace.top
+    skip-cert-verify: true
+  - name: "🇺🇦 LTE | "Cloud | #15"
     type: vless
     server: 91.224.87.22
     port: 9882
@@ -191,17 +198,35 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-tunnel
-  - name: "🌐 Сервер | ir-new.failspa | #15"
+  - name: "🇭🇰 LTE | Lucidacloud | #16"
     type: vless
-    server: ir-new.failspace.top
-    port: 443
-    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    server: 38.207.178.244
+    port: 51895
+    uuid: 51fb4051-a146-45cd-b902-a24df5325b23
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: ir-new.failspace.top
-    skip-cert-verify: true
-  - name: "🌐 LTE | fl.windconnect | #16"
+    servername: aws.amazon.com
+    reality-opts:
+      public-key: Uz7IOZjbOsAGGacB7CVE8jkrIDAphwIIzjurkFx5Ckk
+      short-id: ""
+    client-fingerprint: firefox
+  - name: "🇺🇦 LTE | "Cloud | #17"
+    type: vless
+    server: 91.224.87.22
+    port: 9873
+    uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+    udp: true
+    tls: true
+    servername: dl.google.com
+    reality-opts:
+      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+      short-id: aabb
+    client-fingerprint: qq
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc-tunnel
+  - name: "🌐 LTE | fl.windconnect | #18"
     type: vless
     server: fl.windconnect.pro
     port: 443
@@ -214,7 +239,7 @@ proxies:
       public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
       short-id: 3c6ec7b2d73a28b6
     client-fingerprint: firefox
-  - name: "🇺🇦 LTE | "Cloud | #17"
+  - name: "🇺🇦 LTE | "Cloud | #19"
     type: vless
     server: 91.224.86.107
     port: 9830
@@ -224,78 +249,12 @@ proxies:
     servername: dl.google.com
     reality-opts:
       public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-      short-id: ""
+      short-id: aabbccdd
     client-fingerprint: qq
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-tunnel
-  - name: "🇺🇦 LTE | "Cloud | #18"
-    type: vless
-    server: 91.224.87.22
-    port: 9873
-    uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-    udp: true
-    tls: true
-    servername: dl.google.com
-    reality-opts:
-      public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-      short-id: ""
-    client-fingerprint: qq
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-tunnel
-  - name: "🇲🇩 LTE | GIR | #19"
-    type: vless
-    server: 94.103.2.251
-    port: 443
-    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: io.ozone.ru
-    reality-opts:
-      public-key: a8huhMB5qb3Q0zYwG1QzPjSDTrXufkZMlADT-_EMPhc
-      short-id: ""
-    client-fingerprint: firefox
-  - name: "🇫🇮 LTE | SERV.HOST | #20"
-    type: vless
-    server: 31.77.140.4
-    port: 8443
-    uuid: 9fd994ad-d36c-476d-96c7-25f10bbdf2cb
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: www.io.ozone.ru
-    reality-opts:
-      public-key: 3oXLSdYW2x9TMuDRu2Bo4XGXfVtU8cQqBaL2pcWCNEk
-      short-id: a20d3ed244c76426
-    client-fingerprint: firefox
-  - name: "🇷🇺 LTE | "Cloud | #21"
-    type: vless
-    server: 85.208.86.91
-    port: 9872
-    uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-    udp: true
-    tls: true
-    servername: dl.google.com
-    reality-opts:
-      public-key: sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc
-      short-id: aabb
-    client-fingerprint: qq
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc-tunnel
-  - name: "🌐 Сервер | at-dedic-2.fai | #22"
-    type: vless
-    server: at-dedic-2.failspace.top
-    port: 443
-    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: at-dedic-2.failspace.top
-    skip-cert-verify: true
-  - name: "🇰🇿 LTE | BEGET | #23"
+  - name: "🇰🇿 LTE | BEGET | #20"
     type: vless
     server: 5.35.81.60
     port: 4443
@@ -310,17 +269,45 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: snob-grpc-de
-  - name: "🌐 Сервер | pl-dedic-2.fai | #24"
+  - name: "🇷🇺 LTE | "Cloud | #21"
     type: vless
-    server: pl-dedic-2.failspace.top
+    server: 85.208.86.91
+    port: 9872
+    uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+    udp: true
+    tls: true
+    servername: dl.google.com
+    reality-opts:
+      public-key: sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc
+      short-id: aabbccdd
+    client-fingerprint: qq
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc-tunnel
+  - name: "🌐 Сервер | pl-dedic-3.fai | #22"
+    type: vless
+    server: pl-dedic-3.failspace.top
     port: 443
     uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: pl-dedic-2.failspace.top
+    servername: pl-dedic-3.failspace.top
     skip-cert-verify: true
-  - name: "🌐 Сервер | at-dedic.fails | #25"
+  - name: "🇲🇩 LTE | GIR | #23"
+    type: vless
+    server: 94.103.2.251
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: io.ozone.ru
+    reality-opts:
+      public-key: a8huhMB5qb3Q0zYwG1QzPjSDTrXufkZMlADT-_EMPhc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: "🌐 Сервер | at-dedic.fails | #24"
     type: vless
     server: at-dedic.failspace.top
     port: 443
@@ -330,9 +317,103 @@ proxies:
     tls: true
     servername: at-dedic.failspace.top
     skip-cert-verify: true
-  - name: "🇵🇱 LTE | OC | #26"
+  - name: "🇫🇮 LTE | SERV.HOST | #25"
     type: vless
-    server: 95.85.253.208
+    server: 31.77.140.4
+    port: 8443
+    uuid: 9fd994ad-d36c-476d-96c7-25f10bbdf2cb
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.io.ozone.ru
+    reality-opts:
+      public-key: 3oXLSdYW2x9TMuDRu2Bo4XGXfVtU8cQqBaL2pcWCNEk
+      short-id: a20d3ed244c76426
+    client-fingerprint: firefox
+  - name: "🇸🇬 LTE | Amazon.com, | #26"
+    type: vless
+    server: 54.251.224.5
+    port: 26017
+    uuid: d318cdac-0033-4b6e-98bf-35116e79c93f
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: www.amd.com
+    reality-opts:
+      public-key: cy4ePzAdSz4pqRmAXXchMIgSoSKo8qjq2qLk5805LRA
+      short-id: af1c2e33b0c7dad7
+    client-fingerprint: chrome
+  - name: "🇫🇮 LTE | Play2go | #27"
+    type: vless
+    server: 2.26.100.192
+    port: 445
+    uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: ads.x5.ru
+    reality-opts:
+      public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
+      short-id: c226283c4de5b1ad
+    client-fingerprint: firefox
+  - name: "🇷🇺 LTE | Selectel | #28"
+    type: vless
+    server: 31.131.255.35
+    port: 9894
+    uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+    udp: true
+    tls: true
+    servername: dl.google.com
+    reality-opts:
+      public-key: sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc
+      short-id: ""
+    client-fingerprint: qq
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc-tunnel
+  - name: "🌐 Сервер | at-dedic-2.fai | #29"
+    type: vless
+    server: at-dedic-2.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: at-dedic-2.failspace.top
+    skip-cert-verify: true
+  - name: "🌐 Сервер | uk-dedic-new-1 | #30"
+    type: vless
+    server: uk-dedic-new-1.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: uk-dedic-new-1.failspace.top
+    skip-cert-verify: true
+  - name: "🌐 Сервер | pl-dedic-2.fai | #31"
+    type: vless
+    server: pl-dedic-2.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: pl-dedic-2.failspace.top
+    skip-cert-verify: true
+  - name: "🌐 Сервер | pl-new-dedic.f | #32"
+    type: vless
+    server: pl-new-dedic.failspace.top
+    port: 443
+    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: pl-new-dedic.failspace.top
+    skip-cert-verify: true
+  - name: "🇵🇱 LTE | OC | #33"
+    type: vless
+    server: 2.27.244.94
     port: 443
     uuid: 568addfa-796a-40f8-820d-a071ee2ca50a
     udp: true
@@ -346,101 +427,74 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🌐 Сервер | pl-new-dedic.f | #27"
+  - name: "🇩🇪 LTE | Spacecore | #34"
     type: vless
-    server: pl-new-dedic.failspace.top
+    server: 80.76.43.245
     port: 443
-    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    uuid: 568addfa-796a-40f8-820d-a071ee2ca50a
     udp: true
-    flow: xtls-rprx-vision
     tls: true
-    servername: pl-new-dedic.failspace.top
-    skip-cert-verify: true
-  - name: "🇩🇪 Сервер | Hetzner | #28"
-    type: vless
-    server: 91.99.62.132
-    port: 443
-    uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
-    udp: true
+    servername: www.google.com
+    reality-opts:
+      public-key: sJTPQLMDCyPAbRcaJM-P8Y3_xRVpEEGrvv-kkIuIuQE
+      short-id: ""
+    client-fingerprint: firefox
     network: http
     http-opts:
       path:
         - /
-  - name: "🇩🇪 Сервер | Hetzner | #29"
+  - name: "🇸🇬 LTE | Amazon | #35"
     type: vless
-    server: 91.107.179.8
-    port: 15003
-    uuid: 69d8dc73-20ff-4241-bdd8-a9d6d07553b6
-    udp: true
-  - name: "🌐 Сервер | pl-dedic-3.fai | #30"
-    type: vless
-    server: pl-dedic-3.failspace.top
-    port: 443
-    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+    server: 54.255.121.205
+    port: 43840
+    uuid: f053b140-9673-4ac5-bc8b-587bfd2c8fd8
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: pl-dedic-3.failspace.top
-    skip-cert-verify: true
-  - name: "🇳🇱 LTE | Timeweb, | #31"
-    type: vless
-    server: 77.233.213.106
-    port: 40443
-    uuid: 279a8eef-898f-44ef-b4f5-67a494f4b542
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: deepl.com
+    servername: www.sony.com
     reality-opts:
-      public-key: vAG5o6TQvpZAlvDnlyhHEFZBuSgEV_ybQigD_mGKh1M
-      short-id: 5b98
-    client-fingerprint: firefox
-  - name: "🌐 Сервер | uk-dedic-new-1 | #32"
-    type: vless
-    server: uk-dedic-new-1.failspace.top
-    port: 443
-    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: uk-dedic-new-1.failspace.top
-    skip-cert-verify: true
+      public-key: tDzxVcXg6zzA1r0I_1j2y4vE0zkgmIVX3_Jf0UG1AnA
+      short-id: ac4b9f02123aa50b
+    client-fingerprint: qq
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
-      - "🇩🇪 LTE | Spacecore | #1"
-      - "🇷🇺 LTE | LLC | #2"
-      - "🇷🇺 Универсальный | "Domain | #3"
+      - "🇷🇺 LTE | JSC | #1"
+      - "🇷🇺 LTE | Selectel | #2"
+      - "🇷🇺 LTE | JSC | #3"
       - "🌐 Универсальный | fi.snobvpn.onl | #4"
-      - "🇷🇺 LTE | Selectel | #5"
+      - "🇬🇧 LTE | GTT | #5"
       - "🇳🇱 LTE | Baxet | #6"
-      - "🇬🇧 LTE | GTT | #7"
-      - "🇵🇱 LTE | OC | #8"
-      - "🇳🇱 LTE | Eternity | #9"
+      - "🇵🇱 LTE | OC | #7"
+      - "🇺🇸 LTE | Netgrid | #8"
+      - "🇫🇮 LTE | Play2go | #9"
       - "🌐 LTE | de-xh02.tcp-re | #10"
-      - "🇬🇧 Универсальный | FDCservers.net | #11"
+      - "🇩🇪 LTE | Play2go | #11"
       - "🇬🇧 Универсальный | FDCservers.net | #12"
-      - "🌐 LTE | de.pinkmoon.pr | #13"
-      - "🇺🇦 LTE | "Cloud | #14"
-      - "🌐 Сервер | ir-new.failspa | #15"
-      - "🌐 LTE | fl.windconnect | #16"
+      - "🇬🇧 Универсальный | FDCservers.net | #13"
+      - "🌐 Сервер | ir-new.failspa | #14"
+      - "🇺🇦 LTE | "Cloud | #15"
+      - "🇭🇰 LTE | Lucidacloud | #16"
       - "🇺🇦 LTE | "Cloud | #17"
-      - "🇺🇦 LTE | "Cloud | #18"
-      - "🇲🇩 LTE | GIR | #19"
-      - "🇫🇮 LTE | SERV.HOST | #20"
+      - "🌐 LTE | fl.windconnect | #18"
+      - "🇺🇦 LTE | "Cloud | #19"
+      - "🇰🇿 LTE | BEGET | #20"
       - "🇷🇺 LTE | "Cloud | #21"
-      - "🌐 Сервер | at-dedic-2.fai | #22"
-      - "🇰🇿 LTE | BEGET | #23"
-      - "🌐 Сервер | pl-dedic-2.fai | #24"
-      - "🌐 Сервер | at-dedic.fails | #25"
-      - "🇵🇱 LTE | OC | #26"
-      - "🌐 Сервер | pl-new-dedic.f | #27"
-      - "🇩🇪 Сервер | Hetzner | #28"
-      - "🇩🇪 Сервер | Hetzner | #29"
-      - "🌐 Сервер | pl-dedic-3.fai | #30"
-      - "🇳🇱 LTE | Timeweb, | #31"
-      - "🌐 Сервер | uk-dedic-new-1 | #32"
+      - "🌐 Сервер | pl-dedic-3.fai | #22"
+      - "🇲🇩 LTE | GIR | #23"
+      - "🌐 Сервер | at-dedic.fails | #24"
+      - "🇫🇮 LTE | SERV.HOST | #25"
+      - "🇸🇬 LTE | Amazon.com, | #26"
+      - "🇫🇮 LTE | Play2go | #27"
+      - "🇷🇺 LTE | Selectel | #28"
+      - "🌐 Сервер | at-dedic-2.fai | #29"
+      - "🌐 Сервер | uk-dedic-new-1 | #30"
+      - "🌐 Сервер | pl-dedic-2.fai | #31"
+      - "🌐 Сервер | pl-new-dedic.f | #32"
+      - "🇵🇱 LTE | OC | #33"
+      - "🇩🇪 LTE | Spacecore | #34"
+      - "🇸🇬 LTE | Amazon | #35"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -448,38 +502,41 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 Авто
-      - "🇩🇪 LTE | Spacecore | #1"
-      - "🇷🇺 LTE | LLC | #2"
-      - "🇷🇺 Универсальный | "Domain | #3"
+      - "🇷🇺 LTE | JSC | #1"
+      - "🇷🇺 LTE | Selectel | #2"
+      - "🇷🇺 LTE | JSC | #3"
       - "🌐 Универсальный | fi.snobvpn.onl | #4"
-      - "🇷🇺 LTE | Selectel | #5"
+      - "🇬🇧 LTE | GTT | #5"
       - "🇳🇱 LTE | Baxet | #6"
-      - "🇬🇧 LTE | GTT | #7"
-      - "🇵🇱 LTE | OC | #8"
-      - "🇳🇱 LTE | Eternity | #9"
+      - "🇵🇱 LTE | OC | #7"
+      - "🇺🇸 LTE | Netgrid | #8"
+      - "🇫🇮 LTE | Play2go | #9"
       - "🌐 LTE | de-xh02.tcp-re | #10"
-      - "🇬🇧 Универсальный | FDCservers.net | #11"
+      - "🇩🇪 LTE | Play2go | #11"
       - "🇬🇧 Универсальный | FDCservers.net | #12"
-      - "🌐 LTE | de.pinkmoon.pr | #13"
-      - "🇺🇦 LTE | "Cloud | #14"
-      - "🌐 Сервер | ir-new.failspa | #15"
-      - "🌐 LTE | fl.windconnect | #16"
+      - "🇬🇧 Универсальный | FDCservers.net | #13"
+      - "🌐 Сервер | ir-new.failspa | #14"
+      - "🇺🇦 LTE | "Cloud | #15"
+      - "🇭🇰 LTE | Lucidacloud | #16"
       - "🇺🇦 LTE | "Cloud | #17"
-      - "🇺🇦 LTE | "Cloud | #18"
-      - "🇲🇩 LTE | GIR | #19"
-      - "🇫🇮 LTE | SERV.HOST | #20"
+      - "🌐 LTE | fl.windconnect | #18"
+      - "🇺🇦 LTE | "Cloud | #19"
+      - "🇰🇿 LTE | BEGET | #20"
       - "🇷🇺 LTE | "Cloud | #21"
-      - "🌐 Сервер | at-dedic-2.fai | #22"
-      - "🇰🇿 LTE | BEGET | #23"
-      - "🌐 Сервер | pl-dedic-2.fai | #24"
-      - "🌐 Сервер | at-dedic.fails | #25"
-      - "🇵🇱 LTE | OC | #26"
-      - "🌐 Сервер | pl-new-dedic.f | #27"
-      - "🇩🇪 Сервер | Hetzner | #28"
-      - "🇩🇪 Сервер | Hetzner | #29"
-      - "🌐 Сервер | pl-dedic-3.fai | #30"
-      - "🇳🇱 LTE | Timeweb, | #31"
-      - "🌐 Сервер | uk-dedic-new-1 | #32"
+      - "🌐 Сервер | pl-dedic-3.fai | #22"
+      - "🇲🇩 LTE | GIR | #23"
+      - "🌐 Сервер | at-dedic.fails | #24"
+      - "🇫🇮 LTE | SERV.HOST | #25"
+      - "🇸🇬 LTE | Amazon.com, | #26"
+      - "🇫🇮 LTE | Play2go | #27"
+      - "🇷🇺 LTE | Selectel | #28"
+      - "🌐 Сервер | at-dedic-2.fai | #29"
+      - "🌐 Сервер | uk-dedic-new-1 | #30"
+      - "🌐 Сервер | pl-dedic-2.fai | #31"
+      - "🌐 Сервер | pl-new-dedic.f | #32"
+      - "🇵🇱 LTE | OC | #33"
+      - "🇩🇪 LTE | Spacecore | #34"
+      - "🇸🇬 LTE | Amazon | #35"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
