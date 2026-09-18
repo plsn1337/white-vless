@@ -2,7 +2,7 @@
 
 # **👾 WHITE VLESS**
 
-<img src="https://img.shields.io/badge/AutoUpdate-Every_2h-9333ea?style=for-the-badge&logo=githubactions">
+<img src="https://img.shields.io/badge/AutoUpdate-Every_24h-9333ea?style=for-the-badge&logo=githubactions">
 <img src="https://img.shields.io/badge/RU_Whitelist-8b5cf6?style=for-the-badge">
 <img src="https://img.shields.io/github/last-commit/plsn1337/white-vless/main?style=for-the-badge&label=Updated&color=9333ea">
 
@@ -89,7 +89,7 @@ https://raw.githubusercontent.com/plsn1337/white-vless/refs/heads/main/filtered_
 | Parameter | Value |
 |-----------|-------|
 | 🔗 Protocol | `VLESS + TCP + Reality` |
-| 🔄 Update | Every 2 hours |
+| 🔄 Update | Every 24 hours |
 
 <img src="https://img.shields.io/badge/Keys-AutoUpdated-9333ea?style=for-the-badge">
 <img src="https://img.shields.io/badge/Status-Online-22c55e?style=for-the-badge">
