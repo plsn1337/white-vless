@@ -16,20 +16,7 @@ proxies:
       path: /snob-ws
       headers:
         Host: fi.snobvpn.online
-  - name: "🇫🇮 LTE | VPSPay | #2"
-    type: vless
-    server: 31.76.245.63
-    port: 443
-    uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: dzen.ru
-    reality-opts:
-      public-key: SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js
-      short-id: a1b2c3d4e5f67890
-    client-fingerprint: firefox
-  - name: "🇳🇱 LTE | Baxet | #3"
+  - name: "🇳🇱 LTE | Baxet | #2"
     type: vless
     server: 89.125.147.199
     port: 443
@@ -41,25 +28,7 @@ proxies:
       public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
       short-id: a1b2c3d4
     client-fingerprint: firefox
-  - name: "🇹🇷 Универсальный | Ideal | #4"
-    type: vless
-    server: 93.190.9.53
-    port: 3090
-    uuid: ea925d7b-8f99-4874-9597-13a224c3664c
-    udp: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vless
-  - name: "🇹🇷 Универсальный | Ideal | #5"
-    type: vless
-    server: 93.190.8.163
-    port: 3090
-    uuid: ea925d7b-8f99-4874-9597-13a224c3664c
-    udp: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vless
-  - name: "🇭🇰 LTE | Voxility | #6"
+  - name: "🇭🇰 LTE | Voxility | #3"
     type: vless
     server: 87.85.241.238
     port: 443
@@ -72,19 +41,46 @@ proxies:
       public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw
       short-id: 3be8339923410338
     client-fingerprint: firefox
-  - name: "🇳🇱 LTE | ExpressHost | #7"
+  - name: "🇳🇱 LTE | PJSC | #4"
     type: vless
-    server: 31.59.150.248
+    server: 78.159.250.214
     port: 443
-    uuid: d929e993-8053-488a-8a22-0ae09f706a2e
+    uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
     udp: true
+    flow: xtls-rprx-vision
     tls: true
-    servername: www.amazon.com
+    servername: qq.utiltools.site
     reality-opts:
-      public-key: GsnJz4Rh8mdgEwxB1l7XCsPT4-vwAl459pHNwCRsoyA
-      short-id: 8f2571eff71798d9
+      public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+      short-id: ""
+    client-fingerprint: random
+  - name: "🇨🇿 LTE | GamerHost | #5"
+    type: vless
+    server: 5.39.202.118
+    port: 443
+    uuid: f495298f-2bdb-4fd8-9ac9-5dd33d1b482a
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: cze1.somiki.best
+    reality-opts:
+      public-key: sg6UZorSKWbfwmfxh0SyfZ-SszlhitX43LHtRGTZU2Y
+      short-id: a4c4e97b89446dcd
     client-fingerprint: firefox
-  - name: "🇸🇪 LTE | InterConnects | #8"
+  - name: "🇷🇺 LTE | JSC | #6"
+    type: vless
+    server: 91.240.87.166
+    port: 443
+    uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: yandex.ru
+    reality-opts:
+      public-key: 2ZUQYIhUijdJ1vRL8iR8RxjmJvRVHYp-JoWevQ2LyR4
+      short-id: 7bb730e3e6616d31
+    client-fingerprint: firefox
+  - name: "🇸🇪 LTE | InterConnects | #7"
     type: vless
     server: 5.157.10.250
     port: 443
@@ -97,20 +93,21 @@ proxies:
       public-key: pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U
       short-id: 6aa2d2e950441a9a
     client-fingerprint: firefox
-  - name: "🇷🇺 LTE | JSC | #9"
+  - name: "🌐 Универсальный | 13.143.182.7.f | #8"
     type: vless
-    server: 91.240.86.12
+    server: 13.143.182.7.fwqfw783rg2dad.website
     port: 443
-    uuid: c5694dc5-39fd-4a92-8430-3837baa522a3
+    uuid: cc39844c-d9ba-4394-9cae-395933f4e353
     udp: true
-    flow: xtls-rprx-vision
     tls: true
-    servername: yandex.ru
-    reality-opts:
-      public-key: 2ZUQYIhUijdJ1vRL8iR8RxjmJvRVHYp-JoWevQ2LyR4
-      short-id: 7bb730e3e6616d31
-    client-fingerprint: firefox
-  - name: "🇷🇺 LTE | JSC | #10"
+    servername: 13.143.182.7.fwqfw783rg2dad.website
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/websocket?ed=2560"
+      headers:
+        Host: 13.143.182.7.fwqfw783rg2dad.website
+  - name: "🇷🇺 LTE | JSC | #9"
     type: vless
     server: 5.42.114.41
     port: 9892
@@ -125,6 +122,20 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-tunnel
+  - name: "🌐 Универсальный | hh.fwqfw783rg2 | #10"
+    type: vless
+    server: hh.fwqfw783rg2dad.website
+    port: 443
+    uuid: cc39844c-d9ba-4652-9cae-395933f4e353
+    udp: true
+    tls: true
+    servername: hh.fwqfw783rg2dad.website
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/websocket?ed=2560"
+      headers:
+        Host: hh.fwqfw783rg2dad.website
   - name: "🇳🇱 LTE | EdgeSec | #11"
     type: vless
     server: 31.77.100.97
@@ -140,7 +151,20 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc
-  - name: "🇷🇺 LTE | "Cloud | #12"
+  - name: "🌐 LTE | qq.utiltools.s | #12"
+    type: vless
+    server: qq.utiltools.site
+    port: 443
+    uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: qq.utiltools.site
+    reality-opts:
+      public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🇷🇺 LTE | "Cloud | #13"
     type: vless
     server: 85.208.86.91
     port: 9872
@@ -155,49 +179,66 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: grpc-tunnel
-  - name: "🌐 LTE | qq.utiltools.s | #13"
+  - name: "🌐 Универсальный | 31.76.65.234.f | #14"
     type: vless
-    server: qq.utiltools.site
+    server: 31.76.65.234.fwqfw783rg2dad.website
     port: 443
-    uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+    uuid: cc39844c-d9ba-4394-9cae-395933f4e353
+    udp: true
+    tls: true
+    servername: 31.76.65.234.fwqfw783rg2dad.website
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: "/websocket?ed=2560"
+      headers:
+        Host: 31.76.65.234.fwqfw783rg2dad.website
+  - name: "🇩🇪 LTE | VPSPay | #15"
+    type: vless
+    server: 13.143.166.112
+    port: 443
+    uuid: 61da8f4b-6ab1-4ca7-bae0-1cec4f9be2f8
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: qq.utiltools.site
+    servername: unpkg.com
     reality-opts:
-      public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-      short-id: ""
-    client-fingerprint: qq
-  - name: "🇸🇪 LTE | xorek.cloud | #14"
+      public-key: V-cWjK_GZ0PTJ3wnUHgwey_dNWI6_QNXsC9CdmA0mVI
+      short-id: 408c85938839e89f
+    client-fingerprint: firefox
+  - name: "🇫🇮 LTE | VPSPay | #16"
     type: vless
-    server: 89.22.232.117
+    server: 31.76.245.63
     port: 443
-    uuid: d929e993-8053-488a-8a22-0ae09f706a2e
+    uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
     udp: true
+    flow: xtls-rprx-vision
     tls: true
-    servername: www.goo.gl
+    servername: dzen.ru
     reality-opts:
-      public-key: 3Qh9roHIRJtLEM-gV_hudQrY6wPK_Dc3ePVtWLGqYho
-      short-id: ef7db38f625526f5
+      public-key: SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js
+      short-id: a1b2c3d4e5f67890
     client-fingerprint: firefox
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
       - "🌐 Универсальный | fi.snobvpn.onl | #1"
-      - "🇫🇮 LTE | VPSPay | #2"
-      - "🇳🇱 LTE | Baxet | #3"
-      - "🇹🇷 Универсальный | Ideal | #4"
-      - "🇹🇷 Универсальный | Ideal | #5"
-      - "🇭🇰 LTE | Voxility | #6"
-      - "🇳🇱 LTE | ExpressHost | #7"
-      - "🇸🇪 LTE | InterConnects | #8"
+      - "🇳🇱 LTE | Baxet | #2"
+      - "🇭🇰 LTE | Voxility | #3"
+      - "🇳🇱 LTE | PJSC | #4"
+      - "🇨🇿 LTE | GamerHost | #5"
+      - "🇷🇺 LTE | JSC | #6"
+      - "🇸🇪 LTE | InterConnects | #7"
+      - "🌐 Универсальный | 13.143.182.7.f | #8"
       - "🇷🇺 LTE | JSC | #9"
-      - "🇷🇺 LTE | JSC | #10"
+      - "🌐 Универсальный | hh.fwqfw783rg2 | #10"
       - "🇳🇱 LTE | EdgeSec | #11"
-      - "🇷🇺 LTE | "Cloud | #12"
-      - "🌐 LTE | qq.utiltools.s | #13"
-      - "🇸🇪 LTE | xorek.cloud | #14"
+      - "🌐 LTE | qq.utiltools.s | #12"
+      - "🇷🇺 LTE | "Cloud | #13"
+      - "🌐 Универсальный | 31.76.65.234.f | #14"
+      - "🇩🇪 LTE | VPSPay | #15"
+      - "🇫🇮 LTE | VPSPay | #16"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -206,19 +247,21 @@ proxy-groups:
     proxies:
       - 🚀 Авто
       - "🌐 Универсальный | fi.snobvpn.onl | #1"
-      - "🇫🇮 LTE | VPSPay | #2"
-      - "🇳🇱 LTE | Baxet | #3"
-      - "🇹🇷 Универсальный | Ideal | #4"
-      - "🇹🇷 Универсальный | Ideal | #5"
-      - "🇭🇰 LTE | Voxility | #6"
-      - "🇳🇱 LTE | ExpressHost | #7"
-      - "🇸🇪 LTE | InterConnects | #8"
+      - "🇳🇱 LTE | Baxet | #2"
+      - "🇭🇰 LTE | Voxility | #3"
+      - "🇳🇱 LTE | PJSC | #4"
+      - "🇨🇿 LTE | GamerHost | #5"
+      - "🇷🇺 LTE | JSC | #6"
+      - "🇸🇪 LTE | InterConnects | #7"
+      - "🌐 Универсальный | 13.143.182.7.f | #8"
       - "🇷🇺 LTE | JSC | #9"
-      - "🇷🇺 LTE | JSC | #10"
+      - "🌐 Универсальный | hh.fwqfw783rg2 | #10"
       - "🇳🇱 LTE | EdgeSec | #11"
-      - "🇷🇺 LTE | "Cloud | #12"
-      - "🌐 LTE | qq.utiltools.s | #13"
-      - "🇸🇪 LTE | xorek.cloud | #14"
+      - "🌐 LTE | qq.utiltools.s | #12"
+      - "🇷🇺 LTE | "Cloud | #13"
+      - "🌐 Универсальный | 31.76.65.234.f | #14"
+      - "🇩🇪 LTE | VPSPay | #15"
+      - "🇫🇮 LTE | VPSPay | #16"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
