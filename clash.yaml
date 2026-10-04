@@ -5,98 +5,7 @@ mode: rule
 log-level: warning
 external-controller: "127.0.0.1:9090"
 proxies:
-  - name: "🇷🇺 LTE | JSC | #1"
-    type: vless
-    server: 37.9.4.112
-    port: 443
-    uuid: dfad3362-8534-4495-bf49-89f2ae229e7a
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: eh.vk.com
-    reality-opts:
-      public-key: 2SkXJNcemtEtKD4RSQbOEzo2IgZJ-IsmWAsma3LkhlA
-      short-id: ""
-    client-fingerprint: firefox
-  - name: "🇳🇱 Универсальный | SDN-VIDEO | #2"
-    type: vless
-    server: 78.159.246.179
-    port: 2053
-    uuid: c2bbf90c-7f13-47dd-b68d-f0bd38b6b3c8
-    udp: true
-    tls: true
-    servername: randomquaint.net
-    skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /api/v1/upload
-  - name: "🇺🇸 Универсальный | Cloudflare, | #3"
-    type: vless
-    server: 8.47.69.0
-    port: 443
-    uuid: 7c2c021c-ca3c-4055-b8be-6590f397a0ec
-    udp: true
-    tls: true
-    servername: kan8.gaipidor.ru
-    skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /
-  - name: "🇺🇸 Универсальный | Cloudflare, | #4"
-    type: vless
-    server: 8.6.112.0
-    port: 443
-    uuid: 7c2c021c-ca3c-4055-b8be-6590f397a0ec
-    udp: true
-    tls: true
-    servername: 186.baklajann.ru
-    skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /
-  - name: "🇬🇧 Универсальный | FDCservers.net | #5"
-    type: vless
-    server: 66.90.105.211
-    port: 2083
-    uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-    udp: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vless
-  - name: "🇷🇺 Универсальный | Global | #6"
-    type: vless
-    server: 46.243.232.125
-    port: 443
-    uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
-    udp: true
-    tls: true
-    servername: fbsv6.guardora.pro
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: fbsv6.guardora.pro
-  - name: "🇳🇱 LTE | Fornex | #7"
-    type: vless
-    server: 31.172.78.218
-    port: 443
-    uuid: 7f02e3c5-e386-4cfe-bd24-c49d196638b6
-    udp: true
-    tls: true
-    servername: www.samsung.com
-    reality-opts:
-      public-key: vdpCzxTgum1RE7zR83O2D6RpwXakb2mncrY9TVznLlQ
-      short-id: d7fcc2913ccb82b8
-    client-fingerprint: chrome
-    network: http
-    http-opts:
-      path:
-        - /api/v1/data
-  - name: "🇳🇱 Универсальный | Global | #8"
+  - name: "🇳🇱 Универсальный | Global | #1"
     type: vless
     server: 81.94.148.214
     port: 443
@@ -110,7 +19,61 @@ proxies:
       path: /ws
       headers:
         Host: 81.94.148.214
-  - name: "🇳🇱 LTE | Global | #9"
+  - name: "🇳🇱 Универсальный | SDN-VIDEO | #2"
+    type: vless
+    server: 78.159.246.110
+    port: 443
+    uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+    udp: true
+    tls: true
+    servername: fbsv6.guardora.pro
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ws
+      headers:
+        Host: fbsv6.guardora.pro
+  - name: "🇷🇺 Универсальный | Global | #3"
+    type: vless
+    server: 46.243.232.125
+    port: 443
+    uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
+    udp: true
+    tls: true
+    servername: fbsv6.guardora.pro
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ws
+      headers:
+        Host: fbsv6.guardora.pro
+  - name: "🇳🇱 LTE | OC | #4"
+    type: vless
+    server: 95.85.226.66
+    port: 443
+    uuid: d3179449-2988-40ec-b08f-dcfe6e66ba63
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: ne55.sonicsonic.icu
+    reality-opts:
+      public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🇭🇺 LTE | ATW | #5"
+    type: vless
+    server: 37.221.212.153
+    port: 443
+    uuid: d3179449-2988-40ec-b08f-dcfe6e66ba63
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: hu0101.bearbeer.digital
+    reality-opts:
+      public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🇳🇱 LTE | Global | #6"
     type: vless
     server: 78.159.245.32
     port: 1449
@@ -126,22 +89,127 @@ proxies:
     http-opts:
       path:
         - /
-  - name: "🇵🇱 LTE | ExpressHost | #10"
+  - name: "🇩🇪 LTE | Senko | #7"
     type: vless
-    server: 45.198.0.109
-    port: 7443
-    uuid: e19b5aa3-16c9-435a-8bc9-76f2f6ddff43
+    server: 31.77.226.120
+    port: 443
+    uuid: d3179449-2988-40ec-b08f-dcfe6e66ba63
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: de2222.bearbeer.digital
+    reality-opts:
+      public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🇭🇺 LTE | ATW | #8"
+    type: vless
+    server: 37.221.210.188
+    port: 443
+    uuid: d3179449-2988-40ec-b08f-dcfe6e66ba63
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: hu888.bearbeer.digital
+    reality-opts:
+      public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🌐 LTE | qq.utiltools.s | #9"
+    type: vless
+    server: qq.utiltools.site
+    port: 443
+    uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: qq.utiltools.site
+    reality-opts:
+      public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🇩🇰 LTE | Global | #10"
+    type: vless
+    server: 81.17.159.115
+    port: 443
+    uuid: d3179449-2988-40ec-b08f-dcfe6e66ba63
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: dk88.sonicsonic.icu
+    reality-opts:
+      public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🇲🇩 LTE | GIR | #11"
+    type: vless
+    server: 94.103.2.220
+    port: 443
+    uuid: d3179449-2988-40ec-b08f-dcfe6e66ba63
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: ru999.bearbeer.digital
+    reality-opts:
+      public-key: gHGAfaFz5S9tb4qmDPWJ-4VzawoFZX3M6KAfANEKaCk
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🇭🇺 LTE | ATW | #12"
+    type: vless
+    server: 37.221.212.163
+    port: 443
+    uuid: d3179449-2988-40ec-b08f-dcfe6e66ba63
     udp: true
     tls: true
-    servername: kaneki.cfd
+    servername: hu0202.bearbeer.digital
     reality-opts:
-      public-key: zPiFm443aOHupJ3axZwnzfRgvlL86HbLA80agOk1UiM
-      short-id: a4f8c92d
-    client-fingerprint: edge
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
-  - name: "🇳🇱 LTE | PJSC | #11"
+      public-key: z-TKWOWgZLfzQ-wNdwXQqVwaUgCmbchM2Xtrk1NGynU
+      short-id: ""
+    client-fingerprint: qq
+    network: http
+    http-opts:
+      path:
+        - /
+  - name: "🇵🇱 LTE | OC | #13"
+    type: vless
+    server: 2.27.244.217
+    port: 443
+    uuid: d3179449-2988-40ec-b08f-dcfe6e66ba63
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: pl11111.bearbeer.digital
+    reality-opts:
+      public-key: gHGAfaFz5S9tb4qmDPWJ-4VzawoFZX3M6KAfANEKaCk
+      short-id: ""
+    client-fingerprint: qq
+  - name: "🇳🇱 Универсальный | SDN-VIDEO | #14"
+    type: vless
+    server: 78.159.246.179
+    port: 2053
+    uuid: c2bbf90c-7f13-47dd-b68d-f0bd38b6b3c8
+    udp: true
+    tls: true
+    servername: randomquaint.net
+    skip-cert-verify: true
+    network: http
+    http-opts:
+      path:
+        - /api/v1/upload
+  - name: "🇷🇺 LTE | DpkgSoft | #15"
+    type: vless
+    server: 2.26.104.40
+    port: 443
+    uuid: f4d71fd6-1c25-4748-836b-1dbda9268039
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: s5.mangateka.top
+    reality-opts:
+      public-key: GLb7RkOVWgSiZ7oZ6MfeByW284NpBy2FrOtgEPXbuic
+      short-id: d343252c9207a130
+    client-fingerprint: firefox
+  - name: "🇳🇱 LTE | PJSC | #16"
     type: vless
     server: 78.159.250.214
     port: 443
@@ -154,64 +222,40 @@ proxies:
       public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
       short-id: ""
     client-fingerprint: random
-  - name: "🌐 LTE | qq.utiltools.s | #12"
+  - name: "🇧🇪 LTE | HSTQ-HOSTING-S | #17"
     type: vless
-    server: qq.utiltools.site
+    server: 13.143.186.68
     port: 443
-    uuid: 4054fdc2-ee80-4419-8a8e-d937df4719e2
+    uuid: e19b5aa3-16c9-435a-8bc9-76f2f6ddff43
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: qq.utiltools.site
+    servername: api-static-upload.kaneki.cfd
     reality-opts:
-      public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
-      short-id: ""
-    client-fingerprint: chrome
-  - name: "🇳🇱 LTE | Global | #13"
-    type: vless
-    server: 81.94.148.120
-    port: 7449
-    uuid: 2690c11f-7258-43fe-aeb9-d90f93a3c317
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: passport.yandex.ru
-    reality-opts:
-      public-key: blW-TdkBvKRn4-lkM64Cn2QgfOqjCRYRQ9upE6RPt3c
-      short-id: c0c41dc21cf7c18e
-    client-fingerprint: firefox
-  - name: "🇳🇱 Универсальный | SDN-VIDEO | #14"
-    type: vless
-    server: 78.159.246.110
-    port: 443
-    uuid: bc5ec86c-3e65-4272-994c-59a924c72a68
-    udp: true
-    tls: true
-    servername: fbsv6.guardora.pro
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ws
-      headers:
-        Host: fbsv6.guardora.pro
+      public-key: d7LhYslRcJWtBNkrKa7z6PsRctmIsqiOASnF2ZACdUk
+      short-id: 3e3535e340e5ea81
+    client-fingerprint: randomized
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
-      - "🇷🇺 LTE | JSC | #1"
+      - "🇳🇱 Универсальный | Global | #1"
       - "🇳🇱 Универсальный | SDN-VIDEO | #2"
-      - "🇺🇸 Универсальный | Cloudflare, | #3"
-      - "🇺🇸 Универсальный | Cloudflare, | #4"
-      - "🇬🇧 Универсальный | FDCservers.net | #5"
-      - "🇷🇺 Универсальный | Global | #6"
-      - "🇳🇱 LTE | Fornex | #7"
-      - "🇳🇱 Универсальный | Global | #8"
-      - "🇳🇱 LTE | Global | #9"
-      - "🇵🇱 LTE | ExpressHost | #10"
-      - "🇳🇱 LTE | PJSC | #11"
-      - "🌐 LTE | qq.utiltools.s | #12"
-      - "🇳🇱 LTE | Global | #13"
+      - "🇷🇺 Универсальный | Global | #3"
+      - "🇳🇱 LTE | OC | #4"
+      - "🇭🇺 LTE | ATW | #5"
+      - "🇳🇱 LTE | Global | #6"
+      - "🇩🇪 LTE | Senko | #7"
+      - "🇭🇺 LTE | ATW | #8"
+      - "🌐 LTE | qq.utiltools.s | #9"
+      - "🇩🇰 LTE | Global | #10"
+      - "🇲🇩 LTE | GIR | #11"
+      - "🇭🇺 LTE | ATW | #12"
+      - "🇵🇱 LTE | OC | #13"
       - "🇳🇱 Универсальный | SDN-VIDEO | #14"
+      - "🇷🇺 LTE | DpkgSoft | #15"
+      - "🇳🇱 LTE | PJSC | #16"
+      - "🇧🇪 LTE | HSTQ-HOSTING-S | #17"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -219,20 +263,23 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 Авто
-      - "🇷🇺 LTE | JSC | #1"
+      - "🇳🇱 Универсальный | Global | #1"
       - "🇳🇱 Универсальный | SDN-VIDEO | #2"
-      - "🇺🇸 Универсальный | Cloudflare, | #3"
-      - "🇺🇸 Универсальный | Cloudflare, | #4"
-      - "🇬🇧 Универсальный | FDCservers.net | #5"
-      - "🇷🇺 Универсальный | Global | #6"
-      - "🇳🇱 LTE | Fornex | #7"
-      - "🇳🇱 Универсальный | Global | #8"
-      - "🇳🇱 LTE | Global | #9"
-      - "🇵🇱 LTE | ExpressHost | #10"
-      - "🇳🇱 LTE | PJSC | #11"
-      - "🌐 LTE | qq.utiltools.s | #12"
-      - "🇳🇱 LTE | Global | #13"
+      - "🇷🇺 Универсальный | Global | #3"
+      - "🇳🇱 LTE | OC | #4"
+      - "🇭🇺 LTE | ATW | #5"
+      - "🇳🇱 LTE | Global | #6"
+      - "🇩🇪 LTE | Senko | #7"
+      - "🇭🇺 LTE | ATW | #8"
+      - "🌐 LTE | qq.utiltools.s | #9"
+      - "🇩🇰 LTE | Global | #10"
+      - "🇲🇩 LTE | GIR | #11"
+      - "🇭🇺 LTE | ATW | #12"
+      - "🇵🇱 LTE | OC | #13"
       - "🇳🇱 Универсальный | SDN-VIDEO | #14"
+      - "🇷🇺 LTE | DpkgSoft | #15"
+      - "🇳🇱 LTE | PJSC | #16"
+      - "🇧🇪 LTE | HSTQ-HOSTING-S | #17"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
