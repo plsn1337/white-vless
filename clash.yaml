@@ -7,45 +7,31 @@ external-controller: "127.0.0.1:9090"
 proxies:
   - name: "🇳🇱 Универсальный | SDN-VIDEO | #1"
     type: vless
-    server: 78.159.246.179
+    server: 78.159.246.85
     port: 8443
-    uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
+    uuid: 6a2aff19-ff1f-4a13-96c8-a4d8986a9699
     udp: true
     tls: true
-    servername: randomquaint.net
+    servername: fitindoor.net
     skip-cert-verify: true
     network: http
     http-opts:
       path:
         - /api/v1/upload
-  - name: "🌐 LTE | m-vruvc.mvpstr | #2"
+  - name: "🇳🇱 LTE | Global | #2"
     type: vless
-    server: m-vruvc.mvpstr.com
-    port: 443
-    uuid: 7c86240f-ac0c-4cfe-87c8-fa0dd69b2d25
+    server: 81.94.148.162
+    port: 9446
+    uuid: 8571b13c-96ae-480a-8b0d-8969ceda21f8
     udp: true
     flow: xtls-rprx-vision
     tls: true
-    servername: m-vruvc.mvpstr.com
+    servername: no.roskomnadzor.space
     reality-opts:
-      public-key: ZtAlhN1pU4MTmv4KaX9J_5_8KWnwy9IOnc-BLzIf234
-      short-id: 11ac376e18d20343
+      public-key: kUxaKv4LfQZyhZgBSFVfVK1zSFCyn5zkQXDSipad1jM
+      short-id: ""
     client-fingerprint: firefox
-  - name: "🇺🇸 Универсальный | Cloudflare, | #3"
-    type: vless
-    server: 8.6.112.0
-    port: 443
-    uuid: d523b305-6735-44db-a346-b42669061bac
-    udp: true
-    tls: true
-    servername: polshaov.ochmaybrooooo.online
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: polshaov.ochmaybrooooo.online
-  - name: "🇺🇸 LTE | Baykov | #4"
+  - name: "🇺🇸 LTE | Baykov | #3"
     type: vless
     server: 45.138.100.248
     port: 10444
@@ -58,33 +44,33 @@ proxies:
       public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
       short-id: 8debcf36f1cc69ff
     client-fingerprint: safari
-  - name: "🇷🇺 LTE | WELLSERVER | #5"
+  - name: "🇺🇸 Универсальный | Cloudflare, | #4"
     type: vless
-    server: 82.202.179.107
-    port: 12443
-    uuid: 8822fe1c-7a83-49c0-af96-c2027cb6ddd5
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: smartcaptcha.yandexcloud.net
-    reality-opts:
-      public-key: 6RMior0_TlChA0R_T8yXvjrrpb_nUiS50uRJrLqFeWM
-      short-id: 780f5e
-    client-fingerprint: random
-  - name: "🇳🇱 Универсальный | SDN-VIDEO | #6"
-    type: vless
-    server: 78.159.246.85
-    port: 2053
-    uuid: 95a608b6-bff1-4e10-bb61-0a39f221bb7d
+    server: 8.6.112.0
+    port: 443
+    uuid: 61ae6877-5efd-41b5-920b-734a45100cbb
     udp: true
     tls: true
-    servername: fitindoor.net
+    servername: polshaov.ochmaybrooooo.online
     skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /api/v1/upload
-  - name: "🇳🇱 LTE | PJSC | #7"
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: polshaov.ochmaybrooooo.online
+  - name: "🇷🇺 Универсальный | Delta | #5"
+    type: vless
+    server: 45.91.55.86
+    port: 443
+    uuid: 9cb8d71c-fe06-4402-a591-eaa1f173b890
+    udp: true
+    tls: true
+    servername: stillroom.10media.top
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: northfeed
+  - name: "🇳🇱 LTE | PJSC | #6"
     type: vless
     server: 78.159.250.214
     port: 443
@@ -96,21 +82,21 @@ proxies:
     reality-opts:
       public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
       short-id: 00000000
-    client-fingerprint: chrome
-  - name: "🇳🇱 Универсальный | PJSC | #8"
+    client-fingerprint: firefox
+  - name: "🌐 LTE | m-vruvc.mvpstr | #7"
     type: vless
-    server: 78.159.250.84
-    port: 2053
-    uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
+    server: m-vruvc.mvpstr.com
+    port: 443
+    uuid: 7c86240f-ac0c-4cfe-87c8-fa0dd69b2d25
     udp: true
+    flow: xtls-rprx-vision
     tls: true
-    servername: summerculture.net
-    skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /api/v1/upload
-  - name: "🇵🇱 Универсальный | Korbank | #9"
+    servername: m-vruvc.mvpstr.com
+    reality-opts:
+      public-key: ZtAlhN1pU4MTmv4KaX9J_5_8KWnwy9IOnc-BLzIf234
+      short-id: 11ac376e18d20343
+    client-fingerprint: firefox
+  - name: "🇵🇱 Универсальный | Korbank | #8"
     type: vless
     server: 83.168.91.16
     port: 443
@@ -122,33 +108,7 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: framefeed
-  - name: "🇳🇱 Универсальный | SDN-VIDEO | #10"
-    type: vless
-    server: 78.159.246.85
-    port: 8443
-    uuid: 6a2aff19-ff1f-4a13-96c8-a4d8986a9699
-    udp: true
-    tls: true
-    servername: fitindoor.net
-    skip-cert-verify: true
-    network: http
-    http-opts:
-      path:
-        - /api/v1/upload
-  - name: "🇳🇱 LTE | NetCrafters | #11"
-    type: vless
-    server: 91.196.163.140
-    port: 10444
-    uuid: e86a3662-9b31-4d59-bc80-9e8644749b95
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: video.yandex.ru
-    reality-opts:
-      public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-      short-id: 8debcf36f1cc69ff
-    client-fingerprint: safari
-  - name: "🇲🇩 LTE | JSC | #12"
+  - name: "🇲🇩 LTE | JSC | #9"
     type: vless
     server: 89.35.14.32
     port: 443
@@ -163,20 +123,20 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: stats.v2.PushService
-  - name: "🇷🇺 LTE | SERV.HOST | #13"
+  - name: "🇳🇱 Универсальный | PJSC | #10"
     type: vless
-    server: 13.143.137.206
-    port: 12443
-    uuid: 9ebf4fda-7395-4800-b42f-b2dda649880a
+    server: 78.159.250.84
+    port: 2053
+    uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
     udp: true
-    flow: xtls-rprx-vision
     tls: true
-    servername: ya.ru
-    reality-opts:
-      public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
-      short-id: d2061bb1
-    client-fingerprint: firefox
-  - name: "🇳🇱 LTE | Servers | #14"
+    servername: summerculture.net
+    skip-cert-verify: true
+    network: http
+    http-opts:
+      path:
+        - /api/v1/upload
+  - name: "🇳🇱 LTE | Servers | #11"
     type: vless
     server: 87.199.205.28
     port: 443
@@ -189,50 +149,35 @@ proxies:
       public-key: W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw
       short-id: a9c11b06829163c9
     client-fingerprint: qq
-  - name: "🇳🇱 Универсальный | PJSC | #15"
+  - name: "🇷🇺 LTE | SERV.HOST | #12"
     type: vless
-    server: 78.159.250.84
+    server: 13.143.137.206
+    port: 8443
+    uuid: 9ebf4fda-7395-4800-b42f-b2dda649880a
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: ya.ru
+    reality-opts:
+      public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
+      short-id: d2061bb1
+    client-fingerprint: firefox
+  - name: "🇳🇱 Универсальный | SDN-VIDEO | #13"
+    type: vless
+    server: 78.159.246.179
     port: 8443
     uuid: 6a2aff19-ff1f-4a13-96c8-a4d8986a9699
     udp: true
     tls: true
-    servername: summerculture.net
+    servername: randomquaint.net
     skip-cert-verify: true
     network: http
     http-opts:
       path:
         - /api/v1/upload
-  - name: "🇷🇺 LTE | Xeon | #16"
+  - name: "🇮🇹 LTE | Route | #14"
     type: vless
-    server: 82.202.178.132
-    port: 443
-    uuid: 03218c7c-acd1-45c0-87a1-9cc77101c6b4
-    udp: true
-    tls: true
-    servername: mobile-api-12.sova.toys
-    reality-opts:
-      public-key: 1A9loATtqTbKfErpj24clMebWdbmBRDgUIADwtlvtAw
-      short-id: 70c20a2f5a7d542e
-    client-fingerprint: firefox
-    network: grpc
-    grpc-opts:
-      grpc-service-name: google.storage.v2.Storage
-  - name: "🌐 LTE | fr.song69.fun | #17"
-    type: vless
-    server: fr.song69.fun
-    port: 443
-    uuid: 408c51e8-9246-483d-ba73-34ab4e202eb9
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: metrika.yandex.ru
-    reality-opts:
-      public-key: HRmmr0Ii4Tr9jPLwratvLhee3_VWFNK47T8AAo7kzww
-      short-id: dcb858da
-    client-fingerprint: firefox
-  - name: "🌐 LTE | it.song69.fun | #18"
-    type: vless
-    server: it.song69.fun
+    server: 82.118.16.149
     port: 443
     uuid: 408c51e8-9246-483d-ba73-34ab4e202eb9
     udp: true
@@ -243,7 +188,20 @@ proxies:
       public-key: HbK-TTnL1Dog-wKCowjLrKsx5ECIt2uxBsdGfeWG6kQ
       short-id: 7bbf811a
     client-fingerprint: firefox
-  - name: "🇳🇱 Универсальный | SDN-VIDEO | #19"
+  - name: "🇷🇺 LTE | SERV.HOST | #15"
+    type: vless
+    server: 13.143.137.206
+    port: 12443
+    uuid: 9ebf4fda-7395-4800-b42f-b2dda649880a
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: ya.ru
+    reality-opts:
+      public-key: 1MLoHw7RVkGefh7XUyuGg4ndxwv4vDU9en-f9JxpXRQ
+      short-id: d2061bb1
+    client-fingerprint: firefox
+  - name: "🇳🇱 Универсальный | SDN-VIDEO | #16"
     type: vless
     server: 78.159.246.179
     port: 2053
@@ -256,18 +214,60 @@ proxies:
     http-opts:
       path:
         - /api/v1/upload
-  - name: "🇷🇺 LTE | Beget | #20"
+  - name: "🇷🇺 LTE | Yandex | #17"
     type: vless
-    server: 45.12.75.242
-    port: 26424
-    uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+    server: 84.201.180.13
+    port: 443
+    uuid: 1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200
     udp: true
     tls: true
-    servername: ya.ru
+    servername: api-maps.yandex.ru
     reality-opts:
-      public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-      short-id: 23103e1e
+      public-key: DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ
+      short-id: ""
     client-fingerprint: firefox
+    network: http
+    http-opts:
+      path:
+        - /
+  - name: "🇳🇱 Универсальный | SDN-VIDEO | #18"
+    type: vless
+    server: 78.159.246.85
+    port: 2053
+    uuid: 95a608b6-bff1-4e10-bb61-0a39f221bb7d
+    udp: true
+    tls: true
+    servername: fitindoor.net
+    skip-cert-verify: true
+    network: http
+    http-opts:
+      path:
+        - /api/v1/upload
+  - name: "🇷🇺 Универсальный | .masterhost | #19"
+    type: vless
+    server: 87.242.117.59
+    port: 443
+    uuid: c19ecc7f-8312-4d9d-90c9-1a997d82d3c5
+    udp: true
+    tls: true
+    servername: se1.my-cdn.org
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: hls-vod.iJxGWWENB3HP4nTjN8IcrA.1790085537.2512.0x5000039ce83a2b8d.2ac8ad72028049619c2fb844a825a.ca.mp4.segment-20-v1-a1.ts
+  - name: "🇳🇱 Универсальный | PJSC | #20"
+    type: vless
+    server: 78.159.250.84
+    port: 8443
+    uuid: 6a2aff19-ff1f-4a13-96c8-a4d8986a9699
+    udp: true
+    tls: true
+    servername: summerculture.net
+    skip-cert-verify: true
+    network: http
+    http-opts:
+      path:
+        - /api/v1/upload
   - name: "🇩🇪 LTE | Customer | #21"
     type: vless
     server: 78.17.178.125
@@ -280,8 +280,33 @@ proxies:
     reality-opts:
       public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
       short-id: e0215064d8d1fd7c
+    client-fingerprint: qq
+  - name: "🇧🇾 LTE | LLC | #22"
+    type: vless
+    server: 95.128.71.79
+    port: 10444
+    uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    servername: ads.x5.ru
+    reality-opts:
+      public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+      short-id: 8debcf36f1cc69ff
     client-fingerprint: firefox
-  - name: "🇦🇪 LTE | anyNode | #22"
+  - name: "🇷🇺 LTE | Beget | #23"
+    type: vless
+    server: 45.12.75.242
+    port: 26424
+    uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+    udp: true
+    tls: true
+    servername: ya.ru
+    reality-opts:
+      public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
+      short-id: 23103e1e
+    client-fingerprint: firefox
+  - name: "🇦🇪 LTE | anyNode | #24"
     type: vless
     server: 45.59.120.217
     port: 443
@@ -293,76 +318,34 @@ proxies:
       public-key: mWxcYeYE-M3iE0RBjTzG88QI9kj2wivJDoIYDu_aG3w
       short-id: 29c2dd1e3ef7c4d4
     client-fingerprint: chrome
-  - name: "🇷🇺 LTE | Moscow | #23"
-    type: vless
-    server: 90.156.218.163
-    port: 443
-    uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: eh.vk.ru
-    reality-opts:
-      public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-      short-id: db04ce8bdb8900f1
-    client-fingerprint: edge
-  - name: "🇳🇱 LTE | Global | #24"
-    type: vless
-    server: 81.94.148.162
-    port: 9446
-    uuid: 8571b13c-96ae-480a-8b0d-8969ceda21f8
-    udp: true
-    flow: xtls-rprx-vision
-    tls: true
-    servername: no.roskomnadzor.space
-    reality-opts:
-      public-key: kUxaKv4LfQZyhZgBSFVfVK1zSFCyn5zkQXDSipad1jM
-      short-id: ""
-    client-fingerprint: firefox
-  - name: "🌐 LTE | fi-p1.h1cloud. | #25"
-    type: vless
-    server: fi-p1.h1cloud.net
-    port: 25481
-    uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
-    udp: true
-    tls: true
-    servername: www.bing.com
-    reality-opts:
-      public-key: mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E
-      short-id: 3b84fc70657725af
-    client-fingerprint: chrome
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 8cb5baa18cd7
 proxy-groups:
   - name: 🚀 Авто
     type: url-test
     proxies:
       - "🇳🇱 Универсальный | SDN-VIDEO | #1"
-      - "🌐 LTE | m-vruvc.mvpstr | #2"
-      - "🇺🇸 Универсальный | Cloudflare, | #3"
-      - "🇺🇸 LTE | Baykov | #4"
-      - "🇷🇺 LTE | WELLSERVER | #5"
-      - "🇳🇱 Универсальный | SDN-VIDEO | #6"
-      - "🇳🇱 LTE | PJSC | #7"
-      - "🇳🇱 Универсальный | PJSC | #8"
-      - "🇵🇱 Универсальный | Korbank | #9"
-      - "🇳🇱 Универсальный | SDN-VIDEO | #10"
-      - "🇳🇱 LTE | NetCrafters | #11"
-      - "🇲🇩 LTE | JSC | #12"
-      - "🇷🇺 LTE | SERV.HOST | #13"
-      - "🇳🇱 LTE | Servers | #14"
-      - "🇳🇱 Универсальный | PJSC | #15"
-      - "🇷🇺 LTE | Xeon | #16"
-      - "🌐 LTE | fr.song69.fun | #17"
-      - "🌐 LTE | it.song69.fun | #18"
-      - "🇳🇱 Универсальный | SDN-VIDEO | #19"
-      - "🇷🇺 LTE | Beget | #20"
+      - "🇳🇱 LTE | Global | #2"
+      - "🇺🇸 LTE | Baykov | #3"
+      - "🇺🇸 Универсальный | Cloudflare, | #4"
+      - "🇷🇺 Универсальный | Delta | #5"
+      - "🇳🇱 LTE | PJSC | #6"
+      - "🌐 LTE | m-vruvc.mvpstr | #7"
+      - "🇵🇱 Универсальный | Korbank | #8"
+      - "🇲🇩 LTE | JSC | #9"
+      - "🇳🇱 Универсальный | PJSC | #10"
+      - "🇳🇱 LTE | Servers | #11"
+      - "🇷🇺 LTE | SERV.HOST | #12"
+      - "🇳🇱 Универсальный | SDN-VIDEO | #13"
+      - "🇮🇹 LTE | Route | #14"
+      - "🇷🇺 LTE | SERV.HOST | #15"
+      - "🇳🇱 Универсальный | SDN-VIDEO | #16"
+      - "🇷🇺 LTE | Yandex | #17"
+      - "🇳🇱 Универсальный | SDN-VIDEO | #18"
+      - "🇷🇺 Универсальный | .masterhost | #19"
+      - "🇳🇱 Универсальный | PJSC | #20"
       - "🇩🇪 LTE | Customer | #21"
-      - "🇦🇪 LTE | anyNode | #22"
-      - "🇷🇺 LTE | Moscow | #23"
-      - "🇳🇱 LTE | Global | #24"
-      - "🌐 LTE | fi-p1.h1cloud. | #25"
+      - "🇧🇾 LTE | LLC | #22"
+      - "🇷🇺 LTE | Beget | #23"
+      - "🇦🇪 LTE | anyNode | #24"
     url: "https://www.gstatic.com/generate_204"
     interval: 180
     tolerance: 50
@@ -371,30 +354,29 @@ proxy-groups:
     proxies:
       - 🚀 Авто
       - "🇳🇱 Универсальный | SDN-VIDEO | #1"
-      - "🌐 LTE | m-vruvc.mvpstr | #2"
-      - "🇺🇸 Универсальный | Cloudflare, | #3"
-      - "🇺🇸 LTE | Baykov | #4"
-      - "🇷🇺 LTE | WELLSERVER | #5"
-      - "🇳🇱 Универсальный | SDN-VIDEO | #6"
-      - "🇳🇱 LTE | PJSC | #7"
-      - "🇳🇱 Универсальный | PJSC | #8"
-      - "🇵🇱 Универсальный | Korbank | #9"
-      - "🇳🇱 Универсальный | SDN-VIDEO | #10"
-      - "🇳🇱 LTE | NetCrafters | #11"
-      - "🇲🇩 LTE | JSC | #12"
-      - "🇷🇺 LTE | SERV.HOST | #13"
-      - "🇳🇱 LTE | Servers | #14"
-      - "🇳🇱 Универсальный | PJSC | #15"
-      - "🇷🇺 LTE | Xeon | #16"
-      - "🌐 LTE | fr.song69.fun | #17"
-      - "🌐 LTE | it.song69.fun | #18"
-      - "🇳🇱 Универсальный | SDN-VIDEO | #19"
-      - "🇷🇺 LTE | Beget | #20"
+      - "🇳🇱 LTE | Global | #2"
+      - "🇺🇸 LTE | Baykov | #3"
+      - "🇺🇸 Универсальный | Cloudflare, | #4"
+      - "🇷🇺 Универсальный | Delta | #5"
+      - "🇳🇱 LTE | PJSC | #6"
+      - "🌐 LTE | m-vruvc.mvpstr | #7"
+      - "🇵🇱 Универсальный | Korbank | #8"
+      - "🇲🇩 LTE | JSC | #9"
+      - "🇳🇱 Универсальный | PJSC | #10"
+      - "🇳🇱 LTE | Servers | #11"
+      - "🇷🇺 LTE | SERV.HOST | #12"
+      - "🇳🇱 Универсальный | SDN-VIDEO | #13"
+      - "🇮🇹 LTE | Route | #14"
+      - "🇷🇺 LTE | SERV.HOST | #15"
+      - "🇳🇱 Универсальный | SDN-VIDEO | #16"
+      - "🇷🇺 LTE | Yandex | #17"
+      - "🇳🇱 Универсальный | SDN-VIDEO | #18"
+      - "🇷🇺 Универсальный | .masterhost | #19"
+      - "🇳🇱 Универсальный | PJSC | #20"
       - "🇩🇪 LTE | Customer | #21"
-      - "🇦🇪 LTE | anyNode | #22"
-      - "🇷🇺 LTE | Moscow | #23"
-      - "🇳🇱 LTE | Global | #24"
-      - "🌐 LTE | fi-p1.h1cloud. | #25"
+      - "🇧🇾 LTE | LLC | #22"
+      - "🇷🇺 LTE | Beget | #23"
+      - "🇦🇪 LTE | anyNode | #24"
 rules:
   - "GEOIP,RU,DIRECT"
   - "MATCH,🔀 Выбор"
