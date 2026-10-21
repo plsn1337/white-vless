@@ -13,8 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -30,7 +28,7 @@ jobs:
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git add filtered_vless_keys.txt clash.yaml filtered_vless_keys_2.txt routing_profiles/
+          git add filtered_vless_keys.txt clash.yaml
           git commit -m "auto-update $(date '+%Y-%m-%d %H:%M')" || echo "no changes"
           git push --force-with-lease
         env:
