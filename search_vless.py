@@ -1,16 +1,12 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import asyncio
 import aiohttp
 import re
 import base64
 import os
+import socket
 import time
 import logging
 import ipaddress
-import socket
-import json
 from datetime import datetime, timezone
 from html import unescape as html_unescape
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse, quote
@@ -20,27 +16,27 @@ log = logging.getLogger("whitevless")
 
 BASE_DIR        = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE     = os.path.join(BASE_DIR, "filtered_vless_keys.txt")
-OUTPUT_FILE_2   = os.path.join(BASE_DIR, "filtered_vless_keys_2.txt")
 DIRECT_FILE     = os.path.join(BASE_DIR, "sources", "direct.txt")
-TEST_FILE       = os.path.join(BASE_DIR, "sources", "Test.txt")
 BLACKLIST_FILE  = os.path.join(BASE_DIR, "blacklist", "vless_blacklist.txt")
 CLASH_FILE      = os.path.join(BASE_DIR, "clash.yaml")
-ROUTING_PROFILES_FILE = os.path.join(BASE_DIR, "routing_profiles", "profiles.json")
+
+HAPP_HWID = "24f0f13cbbff73f2"
+HAPP_HEADERS = {
+    "User-Agent": "Happ/5.5.0/ios/2608111415666",
+    "Accept": "text/plain, */*",
+    "accept-encoding": "gzip",
+    "x-device-model": "iPhone 11 Pro Max",
+    "x-ver-os": "16.5",
+    "x-device-os": "iOS",
+    "x-app-version": "5.5.0",
+    "x-hwid": HAPP_HWID,
+    "hwid": HAPP_HWID,
+}
 
 MAX_KEYS     = 200
-MAX_KEYS_2   = 300
 MAX_PER_HOST = 3
 TCP_TIMEOUT  = 6.0
 CONCURRENCY  = 80
-
-_RU_NETWORKS_RAW = [
-    "158.160.0.0/16", "130.193.32.0/19", "51.250.0.0/16", "84.201.128.0/17",
-    "84.23.52.0/22", "95.163.248.0/22", "79.137.174.0/23", "37.139.32.0/22", "90.156.151.0/24",
-    "5.188.136.0/21", "5.188.140.0/24",
-    "95.213.128.0/17", "92.53.64.0/19", "77.244.208.0/20", "188.225.0.0/18", "178.236.128.0/20",
-    "178.250.240.0/21",
-]
-RU_NETWORKS = [ipaddress.ip_network(n, strict=False) for n in _RU_NETWORKS_RAW]
 
 SELECTEL_RANGES = [
     ipaddress.ip_network("36.46.0.0/16", strict=False),
@@ -53,17 +49,6 @@ SPAM_RE   = re.compile(r'(t\.me|telegram\.(me|org|dog)|@[\w_]{3,}|купить|�
 
 BLOCKLIST_EXACT:   set[str] = set()
 BLOCKLIST_PARTIAL: set[str] = set()
-
-
-def _ip_in_ru_networks(host: str) -> bool:
-    try:
-        addr = ipaddress.ip_address(host)
-    except ValueError:
-        try:
-            addr = ipaddress.ip_address(socket.gethostbyname(host))
-        except Exception:
-            return False
-    return any(addr in net for net in RU_NETWORKS)
 
 
 def _is_selectel(host: str) -> bool:
@@ -159,14 +144,16 @@ def _parse_text(text):
 
 
 async def _get(session, url):
-    try:
-        async with session.get(url, headers={"Accept": "text/plain, */*"},
-                               timeout=aiohttp.ClientTimeout(total=25)) as r:
-            if r.status == 200:
-                return await r.text(errors="ignore")
-            log.debug(f"fetch {url}: status {r.status}")
-    except Exception as e:
-        log.debug(f"fetch {url}: {e}")
+    for attempt in (1, 2):
+        try:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=25)) as r:
+                if r.status == 200:
+                    return await r.text(errors="ignore")
+                log.debug(f"fetch {url}: status {r.status}")
+        except Exception as e:
+            log.debug(f"fetch {url} (попытка {attempt}/2): {e}")
+        if attempt == 1:
+            await asyncio.sleep(2)
     return ""
 
 
@@ -179,19 +166,6 @@ async def fetch_direct(session):
     for url, text in zip(urls, texts):
         found = _parse_text(text)
         log.info(f"  {url.split('/')[-1][:50]}: {len(found)} keys")
-        keys.extend(found)
-    return keys
-
-
-async def fetch_test(session):
-    urls = [u for u in _lines(TEST_FILE) if u.startswith("http")]
-    if not urls: return []
-    log.info(f"[sub2] test sources: {len(urls)}")
-    texts = await asyncio.gather(*[_get(session, u) for u in urls])
-    keys = []
-    for url, text in zip(urls, texts):
-        found = _parse_text(text)
-        log.info(f"  [sub2] {url.split('/')[-1][:50]}: {len(found)} keys")
         keys.extend(found)
     return keys
 
@@ -351,26 +325,6 @@ def write_output(keys_with_lat):
     log.info(f"written {len(lines)} keys → {OUTPUT_FILE}")
 
 
-def write_output_2(keys_with_lat):
-    updated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
-    announce = _make_announce(updated_at)
-    header = "\n".join([
-        f"#profile-title: base64:{_b64e('👾WhiteVless RU')}",
-        "#profile-update-interval: 2",
-        "#support-url: https://github.com/plsn1337/white-vless/",
-        "#profile-web-page-url: https://github.com/plsn1337/white-vless/",
-        f"#announce: base64:{_b64e(announce)}", "",
-    ])
-    _COUNTER["n"] = 0
-    lines = []
-    for lat, key in keys_with_lat:
-        lines.append(f"{key}#{quote(_build_remark(key, lat))}")
-    with open(OUTPUT_FILE_2, "w", encoding="utf-8") as f:
-        f.write(header)
-        for l in lines: f.write(l + "\n")
-    log.info(f"[sub2] written {len(lines)} keys → {OUTPUT_FILE_2}")
-
-
 def _build_clash_config(keys_with_lat, clash_file, title):
     def _proxy(key, name):
         try:
@@ -468,34 +422,6 @@ def write_clash(keys_with_lat):
     _build_clash_config(keys_with_lat, CLASH_FILE, "WhiteVless")
 
 
-def add_routing_profiles():
-    if not os.path.exists(ROUTING_PROFILES_FILE):
-        log.warning(f"routing profiles file not found: {ROUTING_PROFILES_FILE}")
-        return
-    
-    try:
-        with open(ROUTING_PROFILES_FILE, "r", encoding="utf-8") as f:
-            profiles = json.load(f)
-        
-        routing_profiles = [p for p in profiles if p.get("type") == "routing"]
-        control_profiles = [p for p in profiles if p.get("type") == "control"]
-        
-        log.info(f"routing profiles: {len(routing_profiles)} routing, {len(control_profiles)} control")
-        
-        for profile in routing_profiles:
-            name = profile.get("name", "Unknown")
-            description = profile.get("description", "")
-            auto_apply = " (auto)" if profile.get("auto_apply") else ""
-            log.info(f"  🔀 {name}{auto_apply}: {description}")
-        
-        for profile in control_profiles:
-            name = profile.get("name", "Unknown")
-            description = profile.get("description", "")
-            log.info(f"  ⚙️  {name}: {description}")
-    except Exception as e:
-        log.error(f"error loading routing profiles: {e}")
-
-
 def _dedup(keys):
     seen_ep, host_count, result = set(), {}, []
     for key in keys:
@@ -511,12 +437,9 @@ def _dedup(keys):
 
 async def main():
     load_blocklist()
-    add_routing_profiles()
-
-    connector = aiohttp.TCPConnector(limit=150, ssl=False)
-    ua = {"User-Agent": "Happ/3.18.3/Happ/2.8.0/Windows/22226661337228"}
-
-    async with aiohttp.ClientSession(connector=connector, headers=ua) as session:
+    async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(limit=150, ssl=False),
+                                     headers=HAPP_HEADERS) as session, \
+               aiohttp.ClientSession() as geo_session:
 
         all_keys = await fetch_direct(session)
         log.info(f"collected: {len(all_keys)}")
@@ -529,52 +452,11 @@ async def main():
         log.info(f"alive: {len(alive)}")
 
         selected = alive[:MAX_KEYS]
-        await geo_lookup(session, list(dict.fromkeys(_extract(k, "host") for _, k in selected)))
+        await geo_lookup(geo_session, list(dict.fromkeys(_extract(k, "host") for _, k in selected)))
 
         write_output(selected)
         write_clash(selected)
-        log.info(f"sub1 done: {len(selected)} keys")
-
-        log.info("=" * 60)
-        all_keys_2 = await fetch_test(session)
-        log.info(f"[sub2] collected: {len(all_keys_2)}")
-
-        if not all_keys_2:
-            log.info("[sub2] no sources in Test.txt, skipping")
-            return
-
-        unique_hosts = list(dict.fromkeys(_extract(k, "host") for k in all_keys_2 if _extract(k, "host")))
-        log.info(f"[sub2] resolving {len(unique_hosts)} unique hosts...")
-        loop = asyncio.get_event_loop()
-        sem_dns = asyncio.Semaphore(200)
-
-        async def _check_host(host):
-            async with sem_dns:
-                return host, await loop.run_in_executor(None, _ip_in_ru_networks, host)
-
-        results = await asyncio.gather(*[_check_host(h) for h in unique_hosts])
-        ru_hosts = {h for h, ok in results if ok}
-        log.info(f"[sub2] hosts in RU ranges: {len(ru_hosts)}")
-
-        ru_filtered = [k for k in all_keys_2 if _extract(k, "host") in ru_hosts]
-        log.info(f"[sub2] after RU IP filter: {len(ru_filtered)}")
-
-        deduped2 = _dedup(ru_filtered)
-        log.info(f"[sub2] after dedup: {len(deduped2)}")
-
-        def _port_priority(key):
-            port = _extract(key, "port")
-            return 0 if port == 443 else port
-
-        selected2 = sorted(deduped2, key=_port_priority)[:MAX_KEYS_2]
-        log.info(f"[sub2] selected (no TCP check): {len(selected2)}")
-
-        await geo_lookup(session, list(dict.fromkeys(_extract(k, "host") for k in selected2)))
-
-        selected2_with_lat = [(0, k) for k in selected2]
-        write_output_2(selected2_with_lat)
-
-        log.info(f"[sub2] done: {len(selected2)} keys")
+        log.info(f"done: {len(selected)} keys")
 
 
 if __name__ == "__main__":
